@@ -1,0 +1,1348 @@
+
+{
+  "categories": [
+    {
+      "id": "fermented-foods",
+      "name": {
+        "en": "Fermented Foods",
+        "ar": "الأطعمة المتخمرة"
+      },
+      "image": "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400&h=300&fit=crop",
+      "description": {
+        "en": "Probiotic-rich fermented foods for gut health",
+        "ar": "أطعمة مخمرة غنية بالبروبيوتيك لصحة الأمعاء"
+      }
+    },
+    {
+      "id": "sprouted-products",
+      "name": {
+        "en": "Sprouted Products",
+        "ar": "المنتجات المنبتة"
+      },
+      "image": "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400&h=300&fit=crop",
+      "description": {
+        "en": "Nutrient-dense sprouted seeds and grains",
+        "ar": "بذور وحبوب منبتة غنية بالعناصر الغذائية"
+      }
+    },
+    {
+      "id": "collagen",
+      "name": {
+        "en": "Collagen",
+        "ar": "الكولاجين"
+      },
+      "image": "https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=400&h=300&fit=crop",
+      "description": {
+        "en": "Premium collagen for skin and joint health",
+        "ar": "كولاجين مميز لصحة البشرة والمفاصل"
+      }
+    },
+    {
+      "id": "detox-juices",
+      "name": {
+        "en": "Detox Juices",
+        "ar": "عصائر التخلص من السموم"
+      },
+      "image": "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400&h=300&fit=crop",
+      "description": {
+        "en": "Fresh cold-pressed detox juice blends",
+        "ar": "خلطات عصائر التخلص من السموم المعصورة الطازجة"
+      }
+    }
+  ],
+  "products": [
+    {
+      "id": "fermented-kombucha",
+      "title": {
+        "en": "Organic Kombucha Tea",
+        "ar": "شاي الكمبوتشا العضوي"
+      },
+      "image": "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116411/WhatsApp_Image_2025-06-17_at_02.26.28_41d1f741_cmx2wo.jpg",
+      "images": [
+        "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116411/WhatsApp_Image_2025-06-17_at_02.26.28_41d1f741_cmx2wo.jpg",
+        "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116276/WhatsApp_Image_2025-06-17_at_02.23.10_4bce9985_tspz6y.jpg",
+        "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116355/WhatsApp_Image_2025-06-17_at_02.24.42_9daf5ae9_xvnpvq.jpg"
+      ],
+      "category": "fermented-foods",
+      "description": {
+        "en": "Premium organic kombucha tea made with carefully selected probiotics and natural ingredients. Rich in beneficial bacteria that support digestive health and boost immunity. Fermented for the perfect balance of taste and nutrition.",
+        "ar": "شاي الكمبوتشا العضوي المميز المصنوع من البروبيوتيك المختار بعناية والمكونات الطبيعية. غني بالبكتيريا المفيدة التي تدعم صحة الجهاز الهضمي وتعزز المناعة. مخمر للحصول على التوازن المثالي بين الطعم والتغذية."
+      },
+      "shortDescription": {
+        "en": "Premium organic kombucha with probiotics",
+        "ar": "كمبوتشا عضوية مميزة مع البروبيوتيك"
+      },
+      "price": 85,
+      "oldPrice": 99,
+      "reviews": [
+        { "name": "Sarah", "comment": { "en": "Excellent taste and quality! I feel much better after drinking this regularly.", "ar": "طعم وجودة ممتازة! أشعر بتحسن كبير بعد شربها بانتظام." }},
+        { "name": "Ahmed", "comment": { "en": "Great for digestion and overall health. Highly recommended!", "ar": "رائع للهضم والصحة العامة. أنصح به بشدة!" }},
+        { "name": "Maria", "comment": { "en": "Love the natural fermentation process. Perfect balance of flavors.", "ar": "أحب عملية التخمير الطبيعية. توازن مثالي للنكهات." }}
+      ],
+      "details": {
+        "description": {
+          "en": "Our premium kombucha is carefully crafted using traditional fermentation methods with organic tea and natural cultures. Each bottle contains billions of live probiotics to support your digestive health.",
+          "ar": "الكمبوتشا المميزة لدينا مصنوعة بعناية باستخدام طرق التخمير التقليدية مع الشاي العضوي والخمائر الطبيعية. كل زجاجة تحتوي على مليارات البروبيوتيك الحي لدعم صحة الجهاز الهضمي."
+        },
+        "sections": {
+          "en": [
+            {
+              "title": "Health Benefits",
+              "items": [
+                "Rich in probiotics for gut health",
+                "Supports immune system function",
+                "May aid in weight management",
+                "Contains beneficial enzymes",
+                "Natural detoxification support"
+              ]
+            },
+            {
+              "title": "Ingredients",
+              "items": [
+                "Organic black and green tea",
+                "Pure cane sugar (consumed during fermentation)",
+                "SCOBY (Symbiotic Culture of Bacteria and Yeast)",
+                "Filtered water",
+                "Natural fruit extracts"
+              ]
+            }
+          ],
+          "ar": [
+            {
+              "title": "الفوائد الصحية",
+              "items": [
+                "غني بالبروبيوتيك لصحة الأمعاء",
+                "يدعم وظائف جهاز المناعة",
+                "قد يساعد في إدارة الوزن",
+                "يحتوي على إنزيمات مفيدة",
+                "دعم طبيعي لإزالة السموم"
+              ]
+            },
+            {
+              "title": "المكونات",
+              "items": [
+                "الشاي الأسود والأخضر العضوي",
+                "سكر القصب النقي (يستهلك أثناء التخمير)",
+                "خميرة الكمبوتشا الطبيعية",
+                "مياه مفلترة",
+                "مستخلصات فواكه طبيعية"
+              ]
+            }
+          ]
+        }
+      },
+      "faq": [
+        {
+          "question": {
+            "en": "What are the health benefits of kombucha?",
+            "ar": "ما هي الفوائد الصحية للكمبوتشا؟"
+          },
+          "answer": {
+            "en": "Kombucha is rich in probiotics, supports digestive health, boosts immunity, and may help with weight management.",
+            "ar": "الكمبوتشا غنية بالبروبيوتيك، تدعم صحة الجهاز الهضمي، تعزز المناعة، وقد تساعد في إدارة الوزن."
+          }
+        },
+        {
+          "question": {
+            "en": "How should I store kombucha?",
+            "ar": "كيف يجب أن أحفظ الكمبوتشا؟"
+          },
+          "answer": {
+            "en": "Store in the refrigerator and consume within 7 days of opening for best quality.",
+            "ar": "احفظها في الثلاجة واستهلكها خلال 7 أيام من الفتح للحصول على أفضل جودة."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fermented-kefir",
+      "title": {
+        "en": "Probiotic Kefir Drink",
+        "ar": "مشروب الكفير البروبيوتيك"
+      },
+      "image": "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116276/WhatsApp_Image_2025-06-17_at_02.23.10_4bce9985_tspz6y.jpg",
+      "images": [
+        "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116276/WhatsApp_Image_2025-06-17_at_02.23.10_4bce9985_tspz6y.jpg",
+        "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116355/WhatsApp_Image_2025-06-17_at_02.24.42_9daf5ae9_xvnpvq.jpg",
+        "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116411/WhatsApp_Image_2025-06-17_at_02.26.28_41d1f741_cmx2wo.jpg"
+      ],
+      "category": "fermented-foods",
+      "description": {
+        "en": "Traditional kefir drink packed with live probiotics and beneficial enzymes. Made from organic milk and kefir grains, this creamy beverage supports gut health and provides essential nutrients. Rich in protein, calcium, and B vitamins.",
+        "ar": "مشروب الكفير التقليدي المليء بالبروبيوتيك الحي والإنزيمات المفيدة. مصنوع من الحليب العضوي وحبيبات الكفير، هذا المشروب الكريمي يدعم صحة الأمعاء ويوفر العناصر الغذائية الأساسية. غني بالبروتين والكالسيوم وفيتامينات ب."
+      },
+      "shortDescription": {
+        "en": "Traditional probiotic kefir with live cultures",
+        "ar": "كفير بروبيوتيك تقليدي مع الخمائر الحية"
+      },
+      "price": 65,
+      "oldPrice": 75,
+      "reviews": [
+        { "name": "Fatima", "comment": { "en": "Creamy texture and perfect taste! Great for my daily probiotic needs.", "ar": "قوام كريمي وطعم مثالي! رائع لاحتياجاتي اليومية من البروبيوتيك." }},
+        { "name": "Omar", "comment": { "en": "Much better than yogurt. Easy to digest and very nutritious.", "ar": "أفضل بكثير من الزبادي. سهل الهضم ومغذي جداً." }}
+      ],
+      "details": {
+        "description": {
+          "en": "Our traditional kefir is made with authentic kefir grains and organic milk, providing a rich source of probiotics and essential nutrients for optimal digestive health.",
+          "ar": "الكفير التقليدي لدينا مصنوع من حبيبات الكفير الأصيلة والحليب العضوي، مما يوفر مصدراً غنياً من البروبيوتيك والعناصر الغذائية الأساسية لصحة الجهاز الهضمي المثلى."
+        },
+        "sections": {
+          "en": [
+            {
+              "title": "Nutritional Benefits",
+              "items": [
+                "High in protein and calcium",
+                "Rich in B vitamins",
+                "Contains over 30 probiotic strains",
+                "Supports bone health",
+                "Boosts immune function"
+              ]
+            },
+            {
+              "title": "Quality Standards",
+              "items": [
+                "Made with organic milk",
+                "Traditional fermentation process",
+                "No artificial additives",
+                "Fresh daily production",
+                "Laboratory tested for quality"
+              ]
+            }
+          ],
+          "ar": [
+            {
+              "title": "الفوائد الغذائية",
+              "items": [
+                "غني بالبروتين والكالسيوم",
+                "غني بفيتامينات ب",
+                "يحتوي على أكثر من 30 سلالة بروبيوتيك",
+                "يدعم صحة العظام",
+                "يعزز وظائف المناعة"
+              ]
+            },
+            {
+              "title": "معايير الجودة",
+              "items": [
+                "مصنوع من الحليب العضوي",
+                "عملية تخمير تقليدية",
+                "بدون إضافات صناعية",
+                "إنتاج طازج يومي",
+                "مختبر لضمان الجودة"
+              ]
+            }
+          ]
+        }
+      },
+      "faq": [
+        {
+          "question": {
+            "en": "What's the difference between kefir and yogurt?",
+            "ar": "ما الفرق بين الكفير والزبادي؟"
+          },
+          "answer": {
+            "en": "Kefir contains more diverse probiotic strains and has a thinner consistency than yogurt, making it easier to digest.",
+            "ar": "الكفير يحتوي على سلالات بروبيوتيك أكثر تنوعاً وله قوام أقل كثافة من الزبادي، مما يجعله أسهل في الهضم."
+          }
+        },
+        {
+          "question": {
+            "en": "How much kefir should I drink daily?",
+            "ar": "كم من الكفير يجب أن أشرب يومياً؟"
+          },
+          "answer": {
+            "en": "Start with 1/2 cup daily and gradually increase to 1 cup for optimal benefits.",
+            "ar": "ابدأ بنصف كوب يومياً وزد تدريجياً إلى كوب واحد للحصول على أفضل الفوائد."
+          }
+        },
+        {
+          "question": {
+            "en": "Is kefir suitable for lactose intolerant people?",
+            "ar": "هل الكفير مناسب للأشخاص الذين يعانون من عدم تحمل اللاكتوز؟"
+          },
+          "answer": {
+            "en": "Most people with lactose intolerance can tolerate kefir as the fermentation process breaks down most lactose.",
+            "ar": "معظم الأشخاص الذين يعانون من عدم تحمل اللاكتوز يمكنهم تحمل الكفير لأن عملية التخمير تكسر معظم اللاكتوز."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fermented-kimchi",
+      "title": {
+        "en": "Traditional Kimchi",
+        "ar": "الكيمتشي التقليدي"
+      },
+      "image": "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116355/WhatsApp_Image_2025-06-17_at_02.24.42_9daf5ae9_xvnpvq.jpg",
+      "images": [
+        "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116355/WhatsApp_Image_2025-06-17_at_02.24.42_9daf5ae9_xvnpvq.jpg",
+        "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116411/WhatsApp_Image_2025-06-17_at_02.26.28_41d1f741_cmx2wo.jpg",
+        "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116276/WhatsApp_Image_2025-06-17_at_02.23.10_4bce9985_tspz6y.jpg"
+      ],
+      "category": "fermented-foods",
+      "description": {
+        "en": "Authentic Korean kimchi made with napa cabbage, Korean chili flakes, and traditional seasonings. Naturally fermented for weeks to develop complex flavors and maximize probiotic content. Perfect as a side dish or ingredient in various recipes.",
+        "ar": "كيمتشي كوري أصيل مصنوع من الملفوف الصيني ورقائق الفلفل الكوري والتوابل التقليدية. مخمر طبيعياً لأسابيع لتطوير نكهات معقدة وتعظيم محتوى البروبيوتيك. مثالي كمقبل أو مكون في وصفات مختلفة."
+      },
+      "shortDescription": {
+        "en": "Authentic Korean fermented cabbage with probiotics",
+        "ar": "ملفوف كوري مخمر أصيل مع البروبيوتيك"
+      },
+      "price": 45,
+      "reviews": [
+        { "name": "Yuki", "comment": { "en": "Authentic taste just like in Korea! Perfect spice level.", "ar": "طعم أصيل تماماً كما في كوريا! مستوى حرارة مثالي." }},
+        { "name": "Hassan", "comment": { "en": "Great flavor and very healthy. Love the probiotic benefits.", "ar": "نكهة رائعة وصحي جداً. أحب فوائد البروبيوتيك." }}
+      ],
+      "details": {
+        "description": {
+          "en": "Handcrafted using traditional Korean methods, our kimchi is naturally fermented to achieve the perfect balance of spicy, sour, and umami flavors while maximizing probiotic content.",
+          "ar": "مصنوع يدوياً باستخدام الطرق الكورية التقليدية، الكيمتشي لدينا مخمر طبيعياً لتحقيق التوازن المثالي بين النكهات الحارة والحامضة والأومامي مع تعظيم محتوى البروبيوتيك."
+        },
+        "sections": {
+          "en": [
+            {
+              "title": "Traditional Ingredients",
+              "items": [
+                "Fresh napa cabbage",
+                "Korean red chili flakes (gochugaru)",
+                "Garlic and ginger",
+                "Fish sauce and salt",
+                "Green onions and radish"
+              ]
+            },
+            {
+              "title": "Health Properties",
+              "items": [
+                "Rich in vitamins A, B, and C",
+                "High fiber content",
+                "Natural probiotics",
+                "Antioxidant properties",
+                "Low calorie and fat-free"
+              ]
+            }
+          ],
+          "ar": [
+            {
+              "title": "المكونات التقليدية",
+              "items": [
+                "ملفوف صيني طازج",
+                "رقائق الفلفل الأحمر الكوري",
+                "ثوم وزنجبيل",
+                "صلصة السمك والملح",
+                "بصل أخضر وفجل"
+              ]
+            },
+            {
+              "title": "الخصائص الصحية",
+              "items": [
+                "غني بفيتامينات أ وب وج",
+                "محتوى عالي من الألياف",
+                "بروبيوتيك طبيعي",
+                "خصائص مضادة للأكسدة",
+                "قليل السعرات وخالي من الدهون"
+              ]
+            }
+          ]
+        }
+      },
+      "faq": [
+        {
+          "question": {
+            "en": "How spicy is this kimchi?",
+            "ar": "ما مدى حرارة هذا الكيمتشي؟"
+          },
+          "answer": {
+            "en": "Our kimchi has a medium spice level that's flavorful without being overwhelming.",
+            "ar": "الكيمتشي لدينا له مستوى حرارة متوسط لذيذ دون أن يكون ساحقاً."
+          }
+        },
+        {
+          "question": {
+            "en": "How long does kimchi last?",
+            "ar": "كم يدوم الكيمتشي؟"
+          },
+          "answer": {
+            "en": "Properly stored kimchi can last 3-6 months in the refrigerator and continues to ferment slowly.",
+            "ar": "الكيمتشي المحفوظ بشكل صحيح يمكن أن يدوم 3-6 أشهر في الثلاجة ويستمر في التخمر ببطء."
+          }
+        },
+        {
+          "question": {
+            "en": "What are the main health benefits?",
+            "ar": "ما هي الفوائد الصحية الرئيسية؟"
+          },
+          "answer": {
+            "en": "Kimchi is rich in probiotics, vitamin C, fiber, and antioxidants that support immune function and digestion.",
+            "ar": "الكيمتشي غني بالبروبيوتيك وفيتامين سي والألياف ومضادات الأكسدة التي تدعم وظائف المناعة والهضم."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sprouted-quinoa",
+      "title": {
+        "en": "Sprouted Quinoa Seeds",
+        "ar": "بذور الكينوا المنبتة"
+      },
+      "image": "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116276/WhatsApp_Image_2025-06-17_at_02.23.10_4bce9985_tspz6y.jpg",
+      "images": [
+        "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116276/WhatsApp_Image_2025-06-17_at_02.23.10_4bce9985_tspz6y.jpg",
+        "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116411/WhatsApp_Image_2025-06-17_at_02.26.28_41d1f741_cmx2wo.jpg"
+      ],
+      "category": "sprouted-products",
+      "description": {
+        "en": "Nutrient-dense sprouted quinoa seeds that are easier to digest and higher in bioavailable nutrients. Perfect for adding to salads, smoothies, or eating as a healthy snack. Rich in protein, fiber, and essential amino acids.",
+        "ar": "بذور الكينوا المنبتة الغنية بالعناصر الغذائية والتي يسهل هضمها وتحتوي على عناصر غذائية أكثر توفرًا حيويًا. مثالية للإضافة إلى السلطات أو العصائر أو تناولها كوجبة خفيفة صحية. غنية بالبروتين والألياف والأحماض الأمينية الأساسية."
+      },
+      "shortDescription": {
+        "en": "Nutrient-dense sprouted quinoa seeds",
+        "ar": "بذور الكينوا المنبتة الغنية بالعناصر الغذائية"
+      },
+      "price": 65,
+      "oldPrice": 75,
+      "reviews": [
+        { "name": "Noor", "comment": { "en": "Perfect addition to my salads! Crunchy and nutritious.", "ar": "إضافة مثالية لسلطاتي! مقرمشة ومغذية." }},
+        { "name": "Khalid", "comment": { "en": "Great source of protein. Much easier to digest than regular quinoa.", "ar": "مصدر رائع للبروتين. أسهل في الهضم من الكينوا العادية." }}
+      ],
+      "details": {
+        "description": {
+          "en": "Our sprouted quinoa undergoes a careful sprouting process that enhances nutrient absorption and reduces cooking time while maintaining all the essential amino acids your body needs.",
+          "ar": "الكينوا المنبتة لدينا تخضع لعملية إنبات دقيقة تعزز امتصاص العناصر الغذائية وتقلل وقت الطبخ مع الحفاظ على جميع الأحماض الأمينية الأساسية التي يحتاجها جسمك."
+        },
+        "sections": {
+          "en": [
+            {
+              "title": "Nutritional Profile",
+              "items": [
+                "Complete protein with all 9 essential amino acids",
+                "High in fiber and iron",
+                "Rich in magnesium and phosphorus",
+                "Good source of folate",
+                "Gluten-free superfood"
+              ]
+            },
+            {
+              "title": "Usage Ideas",
+              "items": [
+                "Add to salads for extra crunch",
+                "Blend into smoothies",
+                "Eat as a healthy snack",
+                "Mix into yogurt or oatmeal",
+                "Use in grain bowls"
+              ]
+            }
+          ],
+          "ar": [
+            {
+              "title": "الملف الغذائي",
+              "items": [
+                "بروتين كامل مع جميع الأحماض الأمينية الأساسية التسعة",
+                "غني بالألياف والحديد",
+                "غني بالمغنيسيوم والفوسفور",
+                "مصدر جيد لحمض الفوليك",
+                "طعام فائق خالي من الغلوتين"
+              ]
+            },
+            {
+              "title": "أفكار الاستخدام",
+              "items": [
+                "أضف إلى السلطات للمزيد من القرمشة",
+                "امزج في العصائر",
+                "تناول كوجبة خفيفة صحية",
+                "امزج في الزبادي أو الشوفان",
+                "استخدم في أطباق الحبوب"
+              ]
+            }
+          ]
+        }
+      },
+      "faq": [
+        {
+          "question": {
+            "en": "Why are sprouted seeds better?",
+            "ar": "لماذا البذور المنبتة أفضل؟"
+          },
+          "answer": {
+            "en": "Sprouting increases nutrient bioavailability, reduces antinutrients, and makes them easier to digest.",
+            "ar": "الإنبات يزيد من التوفر الحيوي للعناصر الغذائية، ويقلل من مضادات التغذية، ويجعلها أسهل في الهضم."
+          }
+        },
+        {
+          "question": {
+            "en": "How should I consume sprouted quinoa?",
+            "ar": "كيف يجب أن أستهلك الكينوا المنبتة؟"
+          },
+          "answer": {
+            "en": "You can eat them raw, cook them lightly, or add to salads, smoothies, and grain bowls.",
+            "ar": "يمكنك تناولها نيئة أو طبخها قليلاً أو إضافتها إلى السلطات والعصائر وأطباق الحبوب."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sprouted-chickpeas",
+      "title": {
+        "en": "Sprouted Chickpeas",
+        "ar": "الحمص المنبت"
+      },
+      "image": "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116355/WhatsApp_Image_2025-06-17_at_02.24.42_9daf5ae9_xvnpvq.jpg",
+      "images": [
+        "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116355/WhatsApp_Image_2025-06-17_at_02.24.42_9daf5ae9_xvnpvq.jpg",
+        "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116276/WhatsApp_Image_2025-06-17_at_02.23.10_4bce9985_tspz6y.jpg"
+      ],
+      "category": "sprouted-products",
+      "description": {
+        "en": "Fresh sprouted chickpeas with enhanced protein content and improved digestibility. These crunchy, nutritious sprouts are perfect for snacking, adding to salads, or incorporating into Middle Eastern dishes. High in plant-based protein and fiber.",
+        "ar": "الحمص المنبت الطازج مع محتوى بروتيني محسن وقابلية هضم أفضل. هذه البراعم المقرمشة والمغذية مثالية للوجبات الخفيفة أو الإضافة إلى السلطات أو دمجها في الأطباق الشرق أوسطية. غني بالبروتين النباتي والألياف."
+      },
+      "shortDescription": {
+        "en": "Fresh sprouted chickpeas with enhanced nutrition",
+        "ar": "حمص منبت طازج مع تغذية محسنة"
+      },
+      "price": 55,
+      "reviews": [
+        { "name": "Layla", "comment": { "en": "So fresh and crunchy! Perfect for healthy snacking.", "ar": "طازج ومقرمش جداً! مثالي للوجبات الخفيفة الصحية." }},
+        { "name": "Mohammad", "comment": { "en": "Great protein source for vegetarians. Love the texture.", "ar": "مصدر بروتين رائع للنباتيين. أحب القوام." }}
+      ],
+      "details": {
+        "description": {
+          "en": "Our sprouted chickpeas are carefully cultivated to maximize nutritional value while maintaining the perfect crunchy texture that makes them ideal for both cooking and snacking.",
+          "ar": "الحمص المنبت لدينا مزروع بعناية لتعظيم القيمة الغذائية مع الحفاظ على القوام المقرمش المثالي الذي يجعلها مثالية للطبخ والوجبات الخفيفة."
+        },
+        "sections": {
+          "en": [
+            {
+              "title": "Protein Power",
+              "items": [
+                "25% more protein than regular chickpeas",
+                "Complete amino acid profile",
+                "Easily digestible plant protein",
+                "Perfect for muscle building",
+                "Suitable for all dietary preferences"
+              ]
+            },
+            {
+              "title": "Culinary Uses",
+              "items": [
+                "Eat raw as a crunchy snack",
+                "Add to salads and bowls",
+                "Blend into hummus",
+                "Use in Middle Eastern dishes",
+                "Roast with spices"
+              ]
+            }
+          ],
+          "ar": [
+            {
+              "title": "قوة البروتين",
+              "items": [
+                "بروتين أكثر بنسبة 25% من الحمص العادي",
+                "ملف أحماض أمينية كامل",
+                "بروتين نباتي سهل الهضم",
+                "مثالي لبناء العضلات",
+                "مناسب لجميع التفضيلات الغذائية"
+              ]
+            },
+            {
+              "title": "الاستخدامات الطهي",
+              "items": [
+                "تناول نيئاً كوجبة خفيفة مقرمشة",
+                "أضف إلى السلطات والأطباق",
+                "امزج في الحمص",
+                "استخدم في الأطباق الشرق أوسطية",
+                "اشو مع التوابل"
+              ]
+            }
+          ]
+        }
+      },
+      "faq": [
+        {
+          "question": {
+            "en": "How long do fresh sprouts last?",
+            "ar": "كم تدوم البراعم الطازجة؟"
+          },
+          "answer": {
+            "en": "Fresh sprouts should be consumed within 3-5 days and stored in the refrigerator.",
+            "ar": "يجب استهلاك البراعم الطازجة خلال 3-5 أيام وحفظها في الثلاجة."
+          }
+        },
+        {
+          "question": {
+            "en": "Can I eat sprouted chickpeas raw?",
+            "ar": "هل يمكنني تناول الحمص المنبت نيئاً؟"
+          },
+          "answer": {
+            "en": "Yes, sprouted chickpeas are safe to eat raw and are actually more nutritious than cooked ones.",
+            "ar": "نعم، الحمص المنبت آمن للأكل نيئاً وهو في الواقع أكثر تغذية من المطبوخ."
+          }
+        },
+        {
+          "question": {
+            "en": "What's the protein content?",
+            "ar": "ما محتوى البروتين؟"
+          },
+          "answer": {
+            "en": "Sprouted chickpeas contain about 25% more protein than regular chickpeas.",
+            "ar": "الحمص المنبت يحتوي على حوالي 25% بروتين أكثر من الحمص العادي."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sprouted-lentils",
+      "title": {
+        "en": "Mixed Sprouted Lentils",
+        "ar": "العدس المنبت المختلط"
+      },
+      "image": "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116411/WhatsApp_Image_2025-06-17_at_02.26.28_41d1f741_cmx2wo.jpg",
+      "images": [
+        "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116411/WhatsApp_Image_2025-06-17_at_02.26.28_41d1f741_cmx2wo.jpg",
+        "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116355/WhatsApp_Image_2025-06-17_at_02.24.42_9daf5ae9_xvnpvq.jpg"
+      ],
+      "category": "sprouted-products",
+      "description": {
+        "en": "A nutritious blend of sprouted green, red, and black lentils offering complete amino acids and enhanced mineral absorption. These tender sprouts are perfect for soups, stews, salads, or as a protein-rich base for various dishes.",
+        "ar": "خليط مغذي من العدس الأخضر والأحمر والأسود المنبت يوفر أحماض أمينية كاملة وامتصاص محسن للمعادن. هذه البراعم الطرية مثالية للشوربات واليخنات والسلطات أو كقاعدة غنية بالبروتين لأطباق مختلفة."
+      },
+      "shortDescription": {
+        "en": "Nutritious blend of sprouted lentil varieties",
+        "ar": "خليط مغذي من أصناف العدس المنبت"
+      },
+      "price": 50,
+      "oldPrice": 60,
+      "reviews": [
+        { "name": "Amina", "comment": { "en": "Beautiful mix of colors and flavors! Great in soups.", "ar": "خليط جميل من الألوان والنكهات! رائع في الشوربات." }},
+        { "name": "Tariq", "comment": { "en": "Tender and flavorful. Much better than regular lentils.", "ar": "طري ولذيذ. أفضل بكثير من العدس العادي." }}
+      ],
+      "details": {
+        "description": {
+          "en": "Our mixed sprouted lentils combine the best varieties to create a nutritionally complete and delicious blend that's perfect for modern healthy cooking.",
+          "ar": "العدس المنبت المختلط لدينا يجمع بين أفضل الأصناف لخلق مزيج مكتمل غذائياً ولذيذ مثالي للطبخ الصحي الحديث."
+        },
+        "sections": {
+          "en": [
+            {
+              "title": "Lentil Varieties",
+              "items": [
+                "Green lentils for earthy flavor",
+                "Red lentils for sweetness",
+                "Black lentils for rich taste",
+                "Balanced nutritional profile",
+                "Varied textures and colors"
+              ]
+            },
+            {
+              "title": "Cooking Benefits",
+              "items": [
+                "Reduced cooking time",
+                "Enhanced digestibility",
+                "Improved nutrient absorption",
+                "Tender texture",
+                "Versatile preparation options"
+              ]
+            }
+          ],
+          "ar": [
+            {
+              "title": "أصناف العدس",
+              "items": [
+                "العدس الأخضر للنكهة الترابية",
+                "العدس الأحمر للحلاوة",
+                "العدس الأسود للطعم الغني",
+                "ملف غذائي متوازن",
+                "قوام وألوان متنوعة"
+              ]
+            },
+            {
+              "title": "فوائد الطبخ",
+              "items": [
+                "وقت طبخ مخفض",
+                "قابلية هضم محسنة",
+                "امتصاص محسن للعناصر الغذائية",
+                "قوام طري",
+                "خيارات تحضير متنوعة"
+              ]
+            }
+          ]
+        }
+      },
+      "faq": [
+        {
+          "question": {
+            "en": "What types of lentils are included?",
+            "ar": "ما أنواع العدس المشمولة؟"
+          },
+          "answer": {
+            "en": "Our mix includes green, red, and black lentils for optimal nutrition and flavor variety.",
+            "ar": "خليطنا يشمل العدس الأخضر والأحمر والأسود للحصول على تغذية مثلى وتنوع في النكهة."
+          }
+        },
+        {
+          "question": {
+            "en": "Do I need to cook sprouted lentils?",
+            "ar": "هل أحتاج لطبخ العدس المنبت؟"
+          },
+          "answer": {
+            "en": "Sprouted lentils can be eaten raw or lightly cooked for 5-10 minutes for easier digestion.",
+            "ar": "يمكن تناول العدس المنبت نيئاً أو مطبوخاً قليلاً لمدة 5-10 دقائق لسهولة الهضم."
+          }
+        },
+        {
+          "question": {
+            "en": "What's the nutritional advantage of sprouting?",
+            "ar": "ما الميزة الغذائية للإنبات؟"
+          },
+          "answer": {
+            "en": "Sprouting increases vitamin C, reduces cooking time, and improves protein digestibility by up to 30%.",
+            "ar": "الإنبات يزيد فيتامين سي، يقلل وقت الطبخ، ويحسن قابلية هضم البروتين بنسبة تصل إلى 30%."
+          }
+        }
+      ]
+    },
+    {
+      "id": "marine-collagen",
+      "title": {
+        "en": "Marine Collagen Powder",
+        "ar": "مسحوق الكولاجين البحري"
+      },
+      "image": "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116276/WhatsApp_Image_2025-06-17_at_02.23.10_4bce9985_tspz6y.jpg",
+      "images": [
+        "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116276/WhatsApp_Image_2025-06-17_at_02.23.10_4bce9985_tspz6y.jpg",
+        "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116411/WhatsApp_Image_2025-06-17_at_02.26.28_41d1f741_cmx2wo.jpg"
+      ],
+      "category": "collagen",
+      "description": {
+        "en": "Premium marine collagen powder sourced from wild-caught fish. Supports skin elasticity, joint health, and hair strength. Easily dissolves in beverages and has no fishy taste. Type I collagen for maximum absorption.",
+        "ar": "مسحوق الكولاجين البحري المميز المستخرج من الأسماك البرية. يدعم مرونة الجلد وصحة المفاصل وقوة الشعر. يذوب بسهولة في المشروبات وليس له طعم سمكي. كولاجين النوع الأول لأقصى امتصاص."
+      },
+      "shortDescription": {
+        "en": "Premium marine collagen for skin and joints",
+        "ar": "كولاجين بحري مميز للبشرة والمفاصل"
+      },
+      "price": 120,
+      "oldPrice": 140,
+      "reviews": [
+        { "name": "Reem", "comment": { "en": "Amazing results for my skin! No fishy taste at all.", "ar": "نتائج مذهلة لبشرتي! لا طعم سمكي على الإطلاق." }},
+        { "name": "Saeed", "comment": { "en": "Great for joint health. Dissolves perfectly in my morning coffee.", "ar": "رائع لصحة المفاصل. يذوب تماماً في قهوة الصباح." }}
+      ],
+      "details": {
+        "description": {
+          "en": "Sourced from pristine waters and processed using advanced techniques to preserve the natural collagen structure while ensuring maximum bioavailability and purity.",
+          "ar": "مستخرج من مياه نقية ومعالج باستخدام تقنيات متقدمة للحفاظ على بنية الكولاجين الطبيعية مع ضمان أقصى توفر حيوي ونقاء."
+        },
+        "sections": {
+          "en": [
+            {
+              "title": "Beauty Benefits",
+              "items": [
+                "Improves skin elasticity and hydration",
+                "Reduces fine lines and wrinkles",
+                "Strengthens hair and nails",
+                "Supports youthful appearance",
+                "Promotes skin repair"
+              ]
+            },
+            {
+              "title": "Quality Assurance",
+              "items": [
+                "Wild-caught fish source",
+                "No artificial additives",
+                "Third-party tested",
+                "Sustainable sourcing",
+                "Type I collagen peptides"
+              ]
+            }
+          ],
+          "ar": [
+            {
+              "title": "فوائد الجمال",
+              "items": [
+                "يحسن مرونة البشرة وترطيبها",
+                "يقلل الخطوط الدقيقة والتجاعيد",
+                "يقوي الشعر والأظافر",
+                "يدعم المظهر الشبابي",
+                "يعزز إصلاح البشرة"
+              ]
+            },
+            {
+              "title": "ضمان الجودة",
+              "items": [
+                "مصدر أسماك برية",
+                "بدون إضافات صناعية",
+                "مختبر من طرف ثالث",
+                "مصادر مستدامة",
+                "ببتيدات كولاجين النوع الأول"
+              ]
+            }
+          ]
+        }
+      },
+      "faq": [
+        {
+          "question": {
+            "en": "How much collagen should I take daily?",
+            "ar": "كم من الكولاجين يجب أن أتناول يوميًا؟"
+          },
+          "answer": {
+            "en": "We recommend 10-15 grams daily, mixed into your favorite beverage.",
+            "ar": "نوصي بـ 10-15 جرام يوميًا، مخلوطة في مشروبك المفضل."
+          }
+        },
+        {
+          "question": {
+            "en": "When will I see results?",
+            "ar": "متى سأرى النتائج؟"
+          },
+          "answer": {
+            "en": "Most people notice improvements in skin hydration within 4-6 weeks of consistent use.",
+            "ar": "معظم الناس يلاحظون تحسنات في ترطيب البشرة خلال 4-6 أسابيع من الاستخدام المنتظم."
+          }
+        }
+      ]
+    },
+    {
+      "id": "bovine-collagen",
+      "title": {
+        "en": "Grass-Fed Bovine Collagen",
+        "ar": "كولاجين البقر المغذى على العشب"
+      },
+      "image": "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116355/WhatsApp_Image_2025-06-17_at_02.24.42_9daf5ae9_xvnpvq.jpg",
+      "images": [
+        "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116355/WhatsApp_Image_2025-06-17_at_02.24.42_9daf5ae9_xvnpvq.jpg",
+        "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116276/WhatsApp_Image_2025-06-17_at_02.23.10_4bce9985_tspz6y.jpg"
+      ],
+      "category": "collagen",
+      "description": {
+        "en": "High-quality bovine collagen from grass-fed cattle, rich in Type I and III collagen. Supports bone health, muscle recovery, and gut lining integrity. Unflavored powder that mixes easily into hot or cold beverages without affecting taste.",
+        "ar": "كولاجين بقري عالي الجودة من الماشية المغذاة على العشب، غني بكولاجين النوع الأول والثالث. يدعم صحة العظام وتعافي العضلات وسلامة بطانة الأمعاء. مسحوق بدون نكهة يخلط بسهولة في المشروبات الساخنة أو الباردة دون التأثير على الطعم."
+      },
+      "shortDescription": {
+        "en": "Grass-fed bovine collagen for bones and muscles",
+        "ar": "كولاجين بقري مغذى على العشب للعظام والعضلات"
+      },
+      "price": 110,
+      "reviews": [
+        { "name": "Zara", "comment": { "en": "Perfect for my post-workout recovery. No taste at all!", "ar": "مثالي للتعافي بعد التمرين. لا طعم على الإطلاق!" }},
+        { "name": "Ibrahim", "comment": { "en": "Great for bone health. Mixes well in my tea.", "ar": "رائع لصحة العظام. يمتزج جيداً في الشاي." }}
+      ],
+      "details": {
+        "description": {
+          "en": "Our grass-fed bovine collagen comes from ethically raised cattle that graze on natural pastures, ensuring the highest quality and most bioactive collagen peptides.",
+          "ar": "الكولاجين البقري المغذى على العشب لدينا يأتي من الماشية المربية أخلاقياً التي ترعى في المراعي الطبيعية، مما يضمن أعلى جودة وأكثر ببتيدات الكولاجين نشاطاً حيوياً."
+        },
+        "sections": {
+          "en": [
+            {
+              "title": "Structural Support",
+              "items": [
+                "Type I & III collagen for bones",
+                "Supports joint flexibility",
+                "Strengthens tendons and ligaments",
+                "Promotes muscle recovery",
+                "Supports gut lining health"
+              ]
+            },
+            {
+              "title": "Ethical Sourcing",
+              "items": [
+                "100% grass-fed cattle",
+                "Pasture-raised animals",
+                "No hormones or antibiotics",
+                "Sustainable farming practices",
+                "Third-party verified"
+              ]
+            }
+          ],
+          "ar": [
+            {
+              "title": "الدعم الهيكلي",
+              "items": [
+                "كولاجين النوع الأول والثالث للعظام",
+                "يدعم مرونة المفاصل",
+                "يقوي الأوتار والأربطة",
+                "يعزز تعافي العضلات",
+                "يدعم صحة بطانة الأمعاء"
+              ]
+            },
+            {
+              "title": "المصادر الأخلاقية",
+              "items": [
+                "ماشية مغذاة على العشب 100%",
+                "حيوانات مربية في المراعي",
+                "بدون هرمونات أو مضادات حيوية",
+                "ممارسات زراعية مستدامة",
+                "معتمد من طرف ثالث"
+              ]
+            }
+          ]
+        }
+      },
+      "faq": [
+        {
+          "question": {
+            "en": "What's the difference between marine and bovine collagen?",
+            "ar": "ما الفرق بين الكولاجين البحري والبقري؟"
+          },
+          "answer": {
+            "en": "Bovine collagen contains more Type III collagen, which is better for muscle and bone support, while marine focuses on skin.",
+            "ar": "الكولاجين البقري يحتوي على كولاجين النوع الثالث أكثر، وهو أفضل لدعم العضلات والعظام، بينما البحري يركز على البشرة."
+          }
+        },
+        {
+          "question": {
+            "en": "Is this suitable for people with allergies?",
+            "ar": "هل هذا مناسب للأشخاص الذين يعانون من الحساسية؟"
+          },
+          "answer": {
+            "en": "This product is free from dairy, gluten, and soy, but not suitable for those with beef allergies.",
+            "ar": "هذا المنتج خالي من الألبان والغلوتين والصويا، لكنه غير مناسب لمن يعانون من حساسية اللحم البقري."
+          }
+        },
+        {
+          "question": {
+            "en": "Can I cook with this collagen?",
+            "ar": "هل يمكنني الطبخ بهذا الكولاجين؟"
+          },
+          "answer": {
+            "en": "Yes, bovine collagen is heat-stable and can be added to soups, stews, and baked goods.",
+            "ar": "نعم، الكولاجين البقري مستقر حرارياً ويمكن إضافته إلى الشوربات واليخنات والمخبوزات."
+          }
+        }
+      ]
+    },
+    {
+      "id": "collagen-peptides",
+      "title": {
+        "en": "Hydrolyzed Collagen Peptides",
+        "ar": "ببتيدات الكولاجين المتحللة"
+      },
+      "image": "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116411/WhatsApp_Image_2025-06-17_at_02.26.28_41d1f741_cmx2wo.jpg",
+      "images": [
+        "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116411/WhatsApp_Image_2025-06-17_at_02.26.28_41d1f741_cmx2wo.jpg",
+        "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116355/WhatsApp_Image_2025-06-17_at_02.24.42_9daf5ae9_xvnpvq.jpg"
+      ],
+      "category": "collagen",
+      "description": {
+        "en": "Advanced hydrolyzed collagen peptides with superior bioavailability and rapid absorption. Pre-digested for maximum effectiveness, supporting skin elasticity, joint mobility, and cellular repair. Ideal for athletes and active individuals.",
+        "ar": "ببتيدات الكولاجين المتحللة المتقدمة مع توفر حيوي فائق وامتصاص سريع. مهضومة مسبقاً لأقصى فعالية، تدعم مرونة البشرة وحركة المفاصل وإصلاح الخلايا. مثالية للرياضيين والأشخاص النشطين."
+      },
+      "shortDescription": {
+        "en": "Advanced hydrolyzed collagen with superior absorption",
+        "ar": "كولاجين متحلل متقدم مع امتصاص فائق"
+      },
+      "price": 135,
+      "oldPrice": 150,
+      "reviews": [
+        { "name": "Yasmin", "comment": { "en": "Fast results! My skin looks amazing after just 3 weeks.", "ar": "نتائج سريعة! بشرتي تبدو رائعة بعد 3 أسابيع فقط." }},
+        { "name": "Faisal", "comment": { "en": "Perfect for my training recovery. Dissolves instantly!", "ar": "مثالي لتعافي التدريب. يذوب فوراً!" }}
+      ],
+      "details": {
+        "description": {
+          "en": "Our advanced hydrolyzed collagen peptides are processed using cutting-edge technology to break down collagen into smaller, more absorbable molecules for maximum bioavailability.",
+          "ar": "ببتيدات الكولاجين المتحللة المتقدمة لدينا معالجة باستخدام تكنولوجيا متطورة لتكسير الكولاجين إلى جزيئات أصغر وأكثر قابلية للامتصاص لأقصى توفر حيوي."
+        },
+        "sections": {
+          "en": [
+            {
+              "title": "Advanced Technology",
+              "items": [
+                "Low molecular weight peptides",
+                "Enhanced bioavailability",
+                "Rapid absorption rate",
+                "Pre-digested formula",
+                "Optimized particle size"
+              ]
+            },
+            {
+              "title": "Performance Benefits",
+              "items": [
+                "Faster recovery times",
+                "Improved skin elasticity",
+                "Enhanced joint mobility",
+                "Cellular repair support",
+                "Increased collagen synthesis"
+              ]
+            }
+          ],
+          "ar": [
+            {
+              "title": "التكنولوجيا المتقدمة",
+              "items": [
+                "ببتيدات ذات وزن جزيئي منخفض",
+                "توفر حيوي محسن",
+                "معدل امتصاص سريع",
+                "تركيبة مهضومة مسبقاً",
+                "حجم جسيمات محسن"
+              ]
+            },
+            {
+              "title": "فوائد الأداء",
+              "items": [
+                "أوقات تعافي أسرع",
+                "مرونة بشرة محسنة",
+                "حركة مفاصل محسنة",
+                "دعم إصلاح الخلايا",
+                "زيادة تخليق الكولاجين"
+              ]
+            }
+          ]
+        }
+      },
+      "faq": [
+        {
+          "question": {
+            "en": "What makes hydrolyzed collagen better?",
+            "ar": "ما الذي يجعل الكولاجين المتحلل أفضل؟"
+          },
+          "answer": {
+            "en": "Hydrolyzed collagen has smaller molecular size, leading to better absorption and faster results.",
+            "ar": "الكولاجين المتحلل له حجم جزيئي أصغر، مما يؤدي إلى امتصاص أفضل ونتائج أسرع."
+          }
+        },
+        {
+          "question": {
+            "en": "Is this suitable for post-workout recovery?",
+            "ar": "هل هذا مناسب للتعافي بعد التمرين؟"
+          },
+          "answer": {
+            "en": "Yes, collagen peptides support muscle recovery and can reduce exercise-induced joint stress.",
+            "ar": "نعم، ببتيدات الكولاجين تدعم تعافي العضلات ويمكن أن تقلل من الضغط على المفاصل الناتج عن التمرين."
+          }
+        },
+        {
+          "question": {
+            "en": "How quickly does it dissolve?",
+            "ar": "كم سرعة ذوبانه؟"
+          },
+          "answer": {
+            "en": "Peptides dissolve instantly in both hot and cold liquids without clumping or residue.",
+            "ar": "الببتيدات تذوب فوراً في السوائل الساخنة والباردة دون تكتل أو بقايا."
+          }
+        }
+      ]
+    },
+    {
+      "id": "green-detox-juice",
+      "title": {
+        "en": "Green Detox Juice Blend",
+        "ar": "خليط عصير التخلص من السموم الأخضر"
+      },
+      "image": "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116276/WhatsApp_Image_2025-06-17_at_02.23.10_4bce9985_tspz6y.jpg",
+      "images": [
+        "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116276/WhatsApp_Image_2025-06-17_at_02.23.10_4bce9985_tspz6y.jpg",
+        "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116411/WhatsApp_Image_2025-06-17_at_02.26.28_41d1f741_cmx2wo.jpg"
+      ],
+      "category": "detox-juices",
+      "description": {
+        "en": "Powerful blend of green vegetables and superfoods designed to support natural detoxification. Contains spinach, kale, cucumber, celery, and spirulina. Cold-pressed for maximum nutrient retention and freshness.",
+        "ar": "خليط قوي من الخضروات الخضراء والأطعمة الفائقة مصمم لدعم التخلص الطبيعي من السموم. يحتوي على السبانخ واللفت والخيار والكرفس والسبيرولينا. معصور على البارد للاحتفاظ بأقصى قدر من العناصر الغذائية والنضارة."
+      },
+      "shortDescription": {
+        "en": "Powerful green vegetable detox blend",
+        "ar": "خليط قوي للتخلص من السموم من الخضروات الخضراء"
+      },
+      "price": 45,
+      "oldPrice": 55,
+      "reviews": [
+        { "name": "Lina", "comment": { "en": "Fresh and energizing! Perfect start to my day.", "ar": "منعش ومنشط! بداية مثالية ليومي." }},
+        { "name": "Khaled", "comment": { "en": "Great taste for a green juice. Feel so much cleaner!", "ar": "طعم رائع لعصير أخضر. أشعر بنظافة أكبر!" }}
+      ],
+      "details": {
+        "description": {
+          "en": "Our green detox juice is crafted with the finest organic vegetables and superfoods, cold-pressed to preserve maximum nutrients and enzymes for optimal detoxification support.",
+          "ar": "عصير التخلص من السموم الأخضر لدينا مصنوع من أجود الخضروات العضوية والأطعمة الفائقة، معصور على البارد للحفاظ على أقصى قدر من العناصر الغذائية والإنزيمات لدعم التخلص الأمثل من السموم."
+        },
+        "sections": {
+          "en": [
+            {
+              "title": "Green Powerhouse",
+              "items": [
+                "Organic spinach and kale",
+                "Fresh cucumber and celery",
+                "Spirulina superfood",
+                "Natural chlorophyll",
+                "Essential vitamins and minerals"
+              ]
+            },
+            {
+              "title": "Detox Benefits",
+              "items": [
+                "Supports liver detoxification",
+                "Boosts energy levels",
+                "Alkalizes the body",
+                "Rich in antioxidants",
+                "Supports immune function"
+              ]
+            }
+          ],
+          "ar": [
+            {
+              "title": "قوة الخضار الخضراء",
+              "items": [
+                "السبانخ واللفت العضوي",
+                "الخيار والكرفس الطازج",
+                "السبيرولينا الطعام الفائق",
+                "الكلوروفيل الطبيعي",
+                "فيتامينات ومعادن أساسية"
+              ]
+            },
+            {
+              "title": "فوائد التخلص من السموم",
+              "items": [
+                "يدعم تنظيف الكبد",
+                "يعزز مستويات الطاقة",
+                "يقلون الجسم",
+                "غني بمضادات الأكسدة",
+                "يدعم وظائف المناعة"
+              ]
+            }
+          ]
+        }
+      },
+      "faq": [
+        {
+          "question": {
+            "en": "When is the best time to drink detox juice?",
+            "ar": "ما هو أفضل وقت لشرب عصير التخلص من السموم؟"
+          },
+          "answer": {
+            "en": "Best consumed on an empty stomach in the morning for optimal absorption and detox benefits.",
+            "ar": "الأفضل تناوله على معدة فارغة في الصباح للحصول على أفضل امتصاص وفوائد التخلص من السموم."
+          }
+        },
+        {
+          "question": {
+            "en": "How long does the juice stay fresh?",
+            "ar": "كم مدة بقاء العصير طازجاً؟"
+          },
+          "answer": {
+            "en": "Our cold-pressed juices stay fresh for 3-5 days when refrigerated properly.",
+            "ar": "عصائرنا المعصورة على البارد تبقى طازجة لمدة 3-5 أيام عند حفظها في الثلاجة بشكل صحيح."
+          }
+        }
+      ]
+    },
+    {
+      "id": "beetroot-detox",
+      "title": {
+        "en": "Beetroot Liver Detox",
+        "ar": "عصير الشمندر لتنظيف الكبد"
+      },
+      "image": "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116355/WhatsApp_Image_2025-06-17_at_02.24.42_9daf5ae9_xvnpvq.jpg",
+      "images": [
+        "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116355/WhatsApp_Image_2025-06-17_at_02.24.42_9daf5ae9_xvnpvq.jpg",
+        "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116276/WhatsApp_Image_2025-06-17_at_02.23.10_4bce9985_tspz6y.jpg",
+        "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116411/WhatsApp_Image_2025-06-17_at_02.26.28_41d1f741_cmx2wo.jpg"
+      ],
+      "category": "detox-juices",
+      "description": {
+        "en": "Specially formulated beetroot juice blend to support liver function and natural detoxification processes. Combined with carrot, ginger, and lemon for enhanced cleansing properties. Rich in nitrates, antioxidants, and liver-supporting compounds.",
+        "ar": "خليط عصير الشمندر المُركب خصيصاً لدعم وظائف الكبد وعمليات التخلص الطبيعي من السموم. مدمج مع الجزر والزنجبيل والليمون لخصائص تنظيف محسنة. غني بالنترات ومضادات الأكسدة والمركبات الداعمة للكبد."
+      },
+      "shortDescription": {
+        "en": "Beetroot blend for liver support and detox",
+        "ar": "خليط الشمندر لدعم الكبد والتخلص من السموم"
+      },
+      "price": 50,
+      "reviews": [
+        { "name": "Mona", "comment": { "en": "Excellent for liver health! I feel so much better.", "ar": "ممتاز لصحة الكبد! أشعر بتحسن كبير." }},
+        { "name": "Rashid", "comment": { "en": "Great natural detox. Love the earthy taste!", "ar": "تنظيف طبيعي رائع. أحب الطعم الترابي!" }}
+      ],
+      "details": {
+        "description": {
+          "en": "Our beetroot liver detox juice combines the powerful cleansing properties of beetroot with complementary ingredients to create the ultimate liver support formula.",
+          "ar": "عصير الشمندر لتنظيف الكبد لدينا يجمع بين خصائص التنظيف القوية للشمندر مع المكونات المكملة لخلق تركيبة الدعم النهائية للكبد."
+        },
+        "sections": {
+          "en": [
+            {
+              "title": "Liver Support Blend",
+              "items": [
+                "Fresh organic beetroot",
+                "Carrot for beta-carotene",
+                "Ginger for circulation",
+                "Lemon for vitamin C",
+                "Natural liver detoxifiers"
+              ]
+            },
+            {
+              "title": "Cleansing Properties",
+              "items": [
+                "Supports bile production",
+                "Enhances liver enzyme function",
+                "Rich in betalains",
+                "Natural nitrate source",
+                "Antioxidant protection"
+              ]
+            }
+          ],
+          "ar": [
+            {
+              "title": "خليط دعم الكبد",
+              "items": [
+                "الشمندر العضوي الطازج",
+                "الجزر للبيتا كاروتين",
+                "الزنجبيل للدورة الدموية",
+                "الليمون لفيتامين سي",
+                "منظفات الكبد الطبيعية"
+              ]
+            },
+            {
+              "title": "خصائص التنظيف",
+              "items": [
+                "يدعم إنتاج الصفراء",
+                "يعزز وظائف إنزيمات الكبد",
+                "غني بالبيتالين",
+                "مصدر نترات طبيعي",
+                "حماية مضادة للأكسدة"
+              ]
+            }
+          ]
+        }
+      },
+      "faq": [
+        {
+          "question": {
+            "en": "Why is beetroot good for liver detox?",
+            "ar": "لماذا الشمندر جيد لتنظيف الكبد؟"
+          },
+          "answer": {
+            "en": "Beetroot contains betalains and nitrates that support liver enzyme production and bile flow for natural detoxification.",
+            "ar": "الشمندر يحتوي على البيتالين والنترات التي تدعم إنتاج إنزيمات الكبد وتدفق الصفراء للتخلص الطبيعي من السموم."
+          }
+        },
+        {
+          "question": {
+            "en": "Can this juice stain teeth?",
+            "ar": "هل يمكن لهذا العصير تلطيخ الأسنان؟"
+          },
+          "answer": {
+            "en": "We recommend drinking through a straw and rinsing with water afterward to prevent staining.",
+            "ar": "نوصي بالشرب من خلال المصاصة والمضمضة بالماء بعدها لتجنب التلطيخ."
+          }
+        },
+        {
+          "question": {
+            "en": "How often should I drink this detox juice?",
+            "ar": "كم مرة يجب أن أشرب عصير التخلص من السموم هذا؟"
+          },
+          "answer": {
+            "en": "For best results, consume 2-3 times per week as part of a balanced diet and healthy lifestyle.",
+            "ar": "للحصول على أفضل النتائج، استهلكه 2-3 مرات في الأسبوع كجزء من نظام غذائي متوازن ونمط حياة صحي."
+          }
+        }
+      ]
+    },
+    {
+      "id": "citrus-ginger-detox",
+      "title": {
+        "en": "Citrus Ginger Immunity Boost",
+        "ar": "عصير الحمضيات والزنجبيل لتعزيز المناعة"
+      },
+      "image": "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116411/WhatsApp_Image_2025-06-17_at_02.26.28_41d1f741_cmx2wo.jpg",
+      "images": [
+        "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116411/WhatsApp_Image_2025-06-17_at_02.26.28_41d1f741_cmx2wo.jpg",
+        "https://res.cloudinary.com/dys5eyjxp/image/upload/v1750116355/WhatsApp_Image_2025-06-17_at_02.24.42_9daf5ae9_xvnpvq.jpg"
+      ],
+      "category": "detox-juices",
+      "description": {
+        "en": "Energizing blend of fresh citrus fruits and organic ginger root to boost immunity and support detoxification. Contains orange, lemon, grapefruit, and turmeric for powerful antioxidant protection. Perfect morning energizer and immune system supporter.",
+        "ar": "خليط منشط من الفواكه الحمضية الطازجة وجذر الزنجبيل العضوي لتعزيز المناعة ودعم التخلص من السموم. يحتوي على البرتقال والليمون والجريب فروت والكركم لحماية قوية من مضادات الأكسدة. منشط صباحي مثالي وداعم لجهاز المناعة."
+      },
+      "shortDescription": {
+        "en": "Citrus and ginger blend for immunity and energy",
+        "ar": "خليط الحمضيات والزنجبيل للمناعة والطاقة"
+      },
+      "price": 40,
+      "oldPrice": 50,
+      "reviews": [
+        { "name": "Hala", "comment": { "en": "Perfect immunity booster! Love the ginger kick.", "ar": "معزز مناعة مثالي! أحب نكهة الزنجبيل." }},
+        { "name": "Majid", "comment": { "en": "Great morning drink. Gives me energy for the whole day!", "ar": "مشروب صباحي رائع. يعطيني طاقة طوال اليوم!" }}
+      ],
+      "details": {
+        "description": {
+          "en": "Our immunity-boosting blend combines the vitamin C power of citrus fruits with the anti-inflammatory properties of ginger and turmeric for comprehensive wellness support.",
+          "ar": "خليط تعزيز المناعة لدينا يجمع بين قوة فيتامين سي في الفواكه الحمضية مع الخصائص المضادة للالتهابات للزنجبيل والكركم لدعم العافية الشامل."
+        },
+        "sections": {
+          "en": [
+            {
+              "title": "Immunity Blend",
+              "items": [
+                "Fresh orange and lemon",
+                "Pink grapefruit",
+                "Organic ginger root",
+                "Turmeric powder",
+                "Natural vitamin C boost"
+              ]
+            },
+            {
+              "title": "Wellness Benefits",
+              "items": [
+                "Boosts immune function",
+                "Anti-inflammatory properties",
+                "Increases energy levels",
+                "Supports digestion",
+                "Rich in antioxidants"
+              ]
+            }
+          ],
+          "ar": [
+            {
+              "title": "خليط المناعة",
+              "items": [
+                "البرتقال والليمون الطازج",
+                "الجريب فروت الوردي",
+                "جذر الزنجبيل العضوي",
+                "مسحوق الكركم",
+                "تعزيز فيتامين سي الطبيعي"
+              ]
+            },
+            {
+              "title": "فوائد العافية",
+              "items": [
+                "يعزز وظائف المناعة",
+                "خصائص مضادة للالتهابات",
+                "يزيد مستويات الطاقة",
+                "يدعم الهضم",
+                "غني بمضادات الأكسدة"
+              ]
+            }
+          ]
+        }
+      },
+      "faq": [
+        {
+          "question": {
+            "en": "Is this juice too spicy from the ginger?",
+            "ar": "هل هذا العصير حار جداً من الزنجبيل؟"
+          },
+          "answer": {
+            "en": "The ginger provides a pleasant warming sensation balanced by the sweet citrus fruits.",
+            "ar": "الزنجبيل يوفر إحساساً دافئاً لطيفاً متوازناً مع الفواكه الحمضية الحلوة."
+          }
+        },
+        {
+          "question": {
+            "en": "Can I drink this if I'm on medication?",
+            "ar": "هل يمكنني شرب هذا إذا كنت أتناول دواء؟"
+          },
+          "answer": {
+            "en": "Consult your healthcare provider, especially if taking blood thinners, as ginger may interact with certain medications.",
+            "ar": "استشر مقدم الرعاية الصحية، خاصة إذا كنت تتناول مميعات الدم، حيث قد يتفاعل الزنجبيل مع أدوية معينة."
+          }
+        },
+        {
+          "question": {
+            "en": "What's the best time to drink this for immunity?",
+            "ar": "ما أفضل وقت لشرب هذا لتعزيز المناعة؟"
+          },
+          "answer": {
+            "en": "Morning is ideal for maximum vitamin C absorption and to kickstart your immune system for the day.",
+            "ar": "الصباح مثالي لأقصى امتصاص لفيتامين سي ولبدء تشغيل جهاز المناعة لليوم."
+          }
+        }
+      ]
+    }
+  ]
+}
