@@ -155,21 +155,21 @@ const ProductCard: React.FC<ProductCardProps> = ({
     );
   }
 
-  // تصميم خاص للهاتف المحمول
+  // تصميم خاص للهاتف المحمول - محدث
   if (isMobile) {
     return (
       <Card className="group transition-all duration-300 bg-white relative overflow-hidden shadow-md hover:shadow-lg border-0 rounded-2xl mx-0">
         {/* Main Content */}
         <div className="p-3">
-          <div className="flex gap-3">
-            {/* Right Column - Product Image */}
-            <div className="w-32 h-32 flex-shrink-0 flex flex-col">
+          <div className="flex gap-3 h-full">
+            {/* Right Column - Product Image and Button */}
+            <div className="w-28 h-auto flex flex-col">
               <Link
                 to={`/product/${product.id}`}
                 state={{ product }}
-                className="block flex-1"
+                className="block mb-2"
               >
-                <div className="w-full h-full rounded-lg overflow-hidden bg-gray-50 relative">
+                <div className="w-28 h-28 rounded-lg overflow-hidden bg-gray-50 relative">
                   <img
                     src={product.image}
                     alt={product.title}
@@ -186,10 +186,10 @@ const ProductCard: React.FC<ProductCardProps> = ({
                 </div>
               </Link>
               
-              {/* Add to Cart Button below image - aligned to bottom */}
+              {/* Add to Cart Button below image */}
               <Button
                 onClick={handleAddToCart}
-                className="bg-green-600 hover:bg-green-700 text-white flex items-center justify-center gap-1 transition-all duration-200 rounded-lg font-bold text-xs py-2 px-2 shadow-sm hover:shadow-md mt-auto"
+                className="bg-green-600 hover:bg-green-700 text-white flex items-center justify-center gap-1 transition-all duration-200 rounded-lg font-bold text-xs py-2 px-2 shadow-sm hover:shadow-md w-full"
               >
                 <ShoppingCart size={12} />
                 {t("addToCart")}
@@ -197,11 +197,11 @@ const ProductCard: React.FC<ProductCardProps> = ({
             </div>
 
             {/* Left Column - Product Info */}
-            <div className="flex-1 min-w-0">
+            <div className="flex-1 min-w-0 flex flex-col">
               <Link
                 to={`/product/${product.id}`}
                 state={{ product }}
-                className="block"
+                className="block flex-grow"
               >
                 {/* Title */}
                 <h3 className="font-bold text-sm text-gray-800 mb-2 line-clamp-2 leading-tight">
@@ -222,7 +222,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
                 </div>
 
                 {/* Short Description - First 75 characters */}
-                <div className="mb-3">
+                <div className="mb-3 flex-grow">
                   <p className="text-xs text-gray-600 line-clamp-2">
                     {(
                       product.short_description || "منتج عالي الجودة"
@@ -232,8 +232,8 @@ const ProductCard: React.FC<ProductCardProps> = ({
                 </div>
               </Link>
 
-              {/* Price Section - Light Green Background */}
-              <div className="bg-green-50 rounded-lg p-1.5 border border-green-100">
+              {/* Price Section - Light Green Background - Always at bottom */}
+              <div className="bg-green-50 rounded-lg p-1.5 border border-green-100 mt-auto">
                 <div className="flex items-center justify-between">
                   {/* Right Section - Prices */}
                   <div className="flex flex-col">

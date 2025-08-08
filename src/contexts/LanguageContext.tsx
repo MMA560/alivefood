@@ -21,7 +21,7 @@ const translations = {
     // Header
     storeName: 'Alive Food',
     cart: 'Cart',
-    storeDescription:"Tech store for every thing You need related to Tech",
+    storeDescription:"Every Thing related to healthy Food.",
     // Homepage
     heroTitle: 'Premium Health Products',
     heroSubtitle: 'Discover our carefully curated selection of fermented foods, sprouted products, collagen, and detox juices',
@@ -79,7 +79,7 @@ const translations = {
     // Homepage
     heroTitle: 'منتجات صحية مميزة',
     heroSubtitle: 'اكتشف مجموعتنا المختارة بعناية من الأطعمة المتخمرة والمنتجات المنبتة والكولاجين وعصائر التخلص من السموم',
-    storeDescription:"كل ما هو يتعلق بالتكنولوجيا تحتاجه",
+    storeDescription:"كل ما هو يتعلق بالصحة والاطعمة الصحية",
     // Categories
     categories: 'الفئات',
     quickLinks: " روابط سريعه",
