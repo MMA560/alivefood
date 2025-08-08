@@ -82,17 +82,15 @@ const ProductCard = ({ product, translate, formatPrice }) => {
         </div>
         
         {/* Price */}
-        <div className="flex items-center justify-between mb-3">
-          <div className="flex items-center space-x-2">
-            <span className="text-lg font-bold text-green-600">
-              {formatPrice ? formatPrice(parseFloat(product.price)) : `$${product.price}`}
-            </span>
-            {product.old_price && (
-              <span className="text-sm text-gray-400 line-through">
-                {formatPrice ? formatPrice(parseFloat(product.old_price)) : `$${product.old_price}`}
-              </span>
-            )}
+        <div className="mb-3">
+          <div className="text-lg font-bold text-green-600">
+            {formatPrice ? formatPrice(parseFloat(product.price)) : `$${product.price}`}
           </div>
+          {product.old_price && (
+            <div className="text-sm text-gray-400 line-through">
+              {formatPrice ? formatPrice(parseFloat(product.old_price)) : `$${product.old_price}`}
+            </div>
+          )}
         </div>
         
         {/* Add to Cart Button */}
