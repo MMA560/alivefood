@@ -30,11 +30,11 @@ const Footer = () => {
             <div className="flex flex-col items-center md:items-start gap-3">
               <div className="flex items-center space-x-3 space-x-reverse">
                 <Phone size={16} className="text-green-600" />
-                <span className="text-green-600">01033156756</span>
+                <span className="text-green-600">0548081628</span>
               </div>
               <div className="flex items-center space-x-3 space-x-reverse">
                 <Mail size={16} className="text-green-600" />
-                <span className="text-green-600">info@websonic.com</span>
+                <span className="text-green-600">info@alivefood.store</span>
               </div>
             </div>
           </div>
@@ -81,7 +81,7 @@ const Footer = () => {
               <a href="#" className="text-green-600 hover:text-green-700 transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="text-green-600 hover:text-green-700 transition-colors">
+              <a href="https://www.tiktok.com/@rasheda.collagenn?_t=ZS-8yiGlrg7sZk&_r=1" className="text-green-600 hover:text-green-700 transition-colors">
                 <TikTokIcon size={20} />
               </a>
               <a href="#" className="text-green-600 hover:text-green-700 transition-colors">
