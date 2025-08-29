@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowLeft, ArrowRight, Plus, Minus, Trash2, ShoppingBag } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Plus, Minus, Trash2, ShoppingBag, Check, X, Tag } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useCart } from '@/contexts/CartContext';
 import { useCurrencySettings } from "@/hooks/useCurrencySettings";
@@ -7,12 +7,17 @@ import { useIsMobile } from '@/hooks/use-mobile';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const CartPage = () => {
   const { language, t, isRTL } = useLanguage();
   const { items, updateQuantity, removeFromCart, subtotal, shippingFee, totalPrice, totalItems } = useCart();
   const isMobile = useIsMobile();
+
+  // حالات كود الخصم
+  const [discountCode, setDiscountCode] = useState('');
+  const [appliedDiscount, setAppliedDiscount] = useState(null);
+  const [discountError, setDiscountError] = useState('');
 
   // إضافة نظام العملات
   const {
@@ -52,6 +57,33 @@ const CartPage = () => {
     
     return formatAmount(convertedPrice, primaryCurrency.code);
   };
+
+  // دالة تطبيق كود الخصم
+  const applyDiscount = () => {
+    if (discountCode.trim().toUpperCase() === 'SA10') {
+      const discountAmount = subtotal * 0.1; // خصم 10% على المبلغ قبل الشحن
+      setAppliedDiscount({
+        code: 'SA10',
+        percentage: 10,
+        amount: discountAmount
+      });
+      setDiscountError('');
+    } else {
+      setDiscountError(isRTL ? 'كود الخصم غير صحيح' : 'Invalid discount code');
+      setAppliedDiscount(null);
+    }
+  };
+
+  // دالة إزالة الخصم
+  const removeDiscount = () => {
+    setAppliedDiscount(null);
+    setDiscountCode('');
+    setDiscountError('');
+  };
+
+  // حساب المجموع النهائي مع الخصم
+  const discountedSubtotal = appliedDiscount ? subtotal - appliedDiscount.amount : subtotal;
+  const finalTotal = discountedSubtotal + shippingFee;
 
   // تمرير الصفحة للأعلى عند فتحها
   useEffect(() => {
@@ -290,10 +322,94 @@ const CartPage = () => {
                   </div>
                 </div>
 
+                {/* قسم كود الخصم */}
+                <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-4 mb-6 border border-blue-200">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Tag className="w-4 h-4 text-blue-600" />
+                    <span className="font-medium text-blue-800">
+                      {isRTL ? 'كود الخصم' : 'Discount Code'}
+                    </span>
+                  </div>
+                  
+                  {!appliedDiscount ? (
+                    <div className="space-y-3">
+                      <div className="flex gap-2">
+                        <input
+                          type="text"
+                          value={discountCode}
+                          onChange={(e) => {
+                            setDiscountCode(e.target.value.toUpperCase());
+                            setDiscountError('');
+                          }}
+                          placeholder={isRTL ? 'أدخل كود الخصم' : 'Enter discount code'}
+                          className="flex-1 px-3 py-2 border border-blue-300 rounded-lg focus:outline-none focus:border-blue-500 bg-white text-sm"
+                        />
+                        <Button
+                          onClick={applyDiscount}
+                          disabled={!discountCode.trim()}
+                          size="sm"
+                          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg disabled:opacity-50"
+                        >
+                          {isRTL ? 'تطبيق' : 'Apply'}
+                        </Button>
+                      </div>
+                      
+                      {discountError && (
+                        <div className="flex items-center gap-2 text-red-600 text-sm">
+                          <X className="w-4 h-4" />
+                          <span>{discountError}</span>
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <div className="space-y-3">
+                      <div className="flex items-center justify-between bg-green-50 border border-green-200 rounded-lg p-3">
+                        <div className="flex items-center gap-2">
+                          <Check className="w-4 h-4 text-green-600" />
+                          <span className="font-medium text-green-800 text-sm">
+                            {appliedDiscount.code} ({appliedDiscount.percentage}% {isRTL ? 'خصم' : 'OFF'})
+                          </span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <span className="font-bold text-green-600 text-sm">
+                            -{formatPrice(appliedDiscount.amount)}
+                          </span>
+                          <Button
+                            onClick={removeDiscount}
+                            variant="ghost"
+                            size="sm"
+                            className="text-red-500 hover:text-red-700 p-1"
+                          >
+                            <X className="w-4 h-4" />
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* إظهار الخصم في المجموع إذا تم تطبيقه */}
+                {appliedDiscount && (
+                  <div className="bg-green-50 rounded-xl p-4 mb-6 border border-green-200 space-y-3">
+                    <div className="flex justify-between items-center text-sm">
+                      <span className="text-green-700">{isRTL ? 'المجموع الفرعي:' : 'Subtotal:'}</span>
+                      <span className="text-green-700">{formatPrice(subtotal)}</span>
+                    </div>
+                    <div className="flex justify-between items-center text-sm">
+                      <span className="text-green-600 font-medium">{isRTL ? 'الخصم:' : 'Discount:'}</span>
+                      <span className="text-green-600 font-medium">-{formatPrice(appliedDiscount.amount)}</span>
+                    </div>
+                    <div className="flex justify-between items-center text-sm">
+                      <span className="text-green-700">{isRTL ? 'الشحن:' : 'Shipping:'}</span>
+                      <span className="text-green-700">{formatPrice(shippingFee)}</span>
+                    </div>
+                  </div>
+                )}
+
                 <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-xl p-4 mb-6 border-2 border-green-200">
                   <div className="flex justify-between items-center">
                     <span className="text-xl font-bold text-green-800">{t('total')}</span>
-                    <span className="text-2xl font-bold text-green-600">{formatPrice(totalPrice)}</span>
+                    <span className="text-2xl font-bold text-green-600">{formatPrice(finalTotal)}</span>
                   </div>
                 </div>
                 
