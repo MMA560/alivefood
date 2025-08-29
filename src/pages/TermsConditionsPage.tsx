@@ -35,19 +35,20 @@ const TermsConditionsPage = () => {
       intellectualProperty: "Intellectual Property",
       termsModification: "Terms Modification",
       serviceTermination: "Service Termination",
-      lastUpdate: "Last updated: 29 August 2025",
+      lastUpdate: "Last updated: 30 August 2025",
       acceptanceText:
         "By using Alive Food Store website and services, you agree to all terms and conditions mentioned below.",
       service1:
         "Alive Food specializes in selling natural and healthy products",
-      service2: "We provide delivery service to Najran, Saudi Arabia only.",
+      service2:
+        "We provide delivery service to all parts of the Kingdom of Saudi Arabia.",
       service3: "Customer service is available 24 hours a day, 7 days a week",
       price1: "Prices are subject to change based on market conditions",
       price2: "All displayed prices are in Saudi Riyals including taxes",
       price3: "Prices are valid only at the time of order confirmation",
       delivery1:
-        "Delivery time depends on preparation as products are made to order. Delivery is available only within Najran.",
-      delivery2: "We deliver to Najran, Saudi Arabia only.",
+        "Delivery time depends on preparation as products are made to order. Delivery is available all over the Kingdom of Saudi Arabia.",
+      delivery2: "We deliver to all parts of the Kingdom of Saudi Arabia.",
       delivery3: "We will contact you to set a suitable delivery appointment",
       inventory1: "We apply a smart inventory management system",
       inventory2: "Products not available in stock cannot be ordered",
@@ -109,18 +110,18 @@ const TermsConditionsPage = () => {
       intellectualProperty: "حقوق الملكية الفكرية",
       termsModification: "تعديل الشروط",
       serviceTermination: "إنهاء الخدمة",
-      lastUpdate: "تاريخ آخر تحديث: 29 أغسطس 2025",
+      lastUpdate: "تاريخ آخر تحديث: 30 أغسطس 2025",
       acceptanceText:
         "باستخدام موقع وخدمات متجر Alive Food، فإنك توافق على جميع الشروط والأحكام المذكورة أدناه.",
       service1: "متجر Alive Food متخصص في بيع المنتجات الطبيعية والصحية",
-      service2: "نقدم خدمة التوصيل في نجران، المملكة العربية السعودية فقط.",
+      service2: "نقدم خدمة التوصيل في جميع أنحاء المملكة العربية السعودية.",
       service3: "خدمة العملاء متاحة 24 ساعة طوال أيام الأسبوع",
       price1: "الأسعار معرضة للتغيير حسب ظروف السوق",
       price2: "جميع الأسعار المعروضة بالريال السعودي شاملة الضرائب",
       price3: "الأسعار سارية وقت تأكيد الطلب فقط",
       delivery1:
-        "مدة التوصيل تعتمد على وقت التحضير لأن المنتجات تُصنع حسب الطلب. التوصيل متاح داخل نجران فقط.",
-      delivery2: "نوصل في نجران بالمملكة العربية السعودية فقط.",
+        "مدة التوصيل تعتمد على وقت التحضير لأن المنتجات تُصنع حسب الطلب. التوصيل متاح في جميع أنحاء المملكة العربية السعودية.",
+      delivery2: "نوصل في جميع أنحاء المملكة العربية السعودية.",
       delivery3: "يتم التواصل معك لتحديد موعد التسليم المناسب",
       inventory1: "نطبق نظام إدارة المخزون الذكي",
       inventory2: "لا يمكن طلب منتجات غير متوفرة في المخزون",
@@ -314,7 +315,6 @@ const TermsConditionsPage = () => {
                 <span className="text-green-600 mt-1">•</span>
                 <span>{t("payment2")}</span>
               </li>
-              
             </ul>
           </div>
 
