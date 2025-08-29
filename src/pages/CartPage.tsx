@@ -400,7 +400,6 @@ const CartPage = () => {
                       <span className="text-green-600 font-medium">-{formatPrice(appliedDiscount.amount)}</span>
                     </div>
                     <div className="flex justify-between items-center text-sm">
-                      <span className="text-green-700">{isRTL ? 'الشحن:' : 'Shipping:'}</span>
                       <span className="text-green-700">{formatPrice(shippingFee)}</span>
                     </div>
                   </div>
