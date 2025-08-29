@@ -5,94 +5,76 @@ import { useLanguage } from '@/contexts/LanguageContext';
 const ReturnPolicyPage = () => {
   const { language, isRTL } = useLanguage();
 
-  const translations = {
-    en: {
-      title: 'Return & Exchange Policy - Sawa Mob Store',
-      backToHome: 'Back to Home',
-      returnPeriod: 'Return Period',
-      returnConditions: 'Return & Exchange Conditions',
-      shippingCosts: 'Shipping Costs',
-      personalExchange: 'Personal Exchange',
-      manufacturingDefects: 'Manufacturing Defects',
-      returnProcess: 'Return Process',
-      refundPolicy: 'Refund Policy',
-      excludedProducts: 'Excluded Products',
-      rejectionCases: 'Rejection Cases',
-      contact: 'Contact',
-      returnPeriodText: 'You have the right to return or exchange the product within **14 days** from the date of receipt',
-      returnPeriodCalc: 'The period is calculated from the actual delivery date of the product',
-      condition1: 'Product must be in its original condition without any defects or damage',
-      condition2: 'Product must be in original packaging with all accessories',
-      condition3: 'Used or damaged products by customer are not accepted for return',
-      personalExchangeText: 'If you want to exchange the product for personal reasons (dislike, change of mind)',
-      personalExchangeCost: 'Customer bears shipping costs both ways',
-      personalExchangeNote: '**Exchange only available, no refunds**',
-      manufacturingDefectsText: 'In case of product defect or non-compliance with specifications',
-      manufacturingDefectsCost: 'Sawa Mob Store bears all shipping costs',
-      step1: 'Contact us within 14 days through available communication channels',
-      step2: 'Mention order number and reason for return',
-      step3: 'Pickup appointment will be scheduled or shipment arranged',
-      step4: 'After product inspection, return will be approved or rejected',
-      personalRefund: 'For personal exchange reasons, only product exchange is available',
-      personalRefundNote: '**No refunds in this case**',
-      manufacturingRefund: 'Refund processed within 7-14 working days from approval date',
-      manufacturingRefundNote: 'Refund based on shipping policy attached with product',
-      shippingDeduction: '**Shipping cost will be deducted from refunded amount**',
-      cashRefund: 'For cash on delivery, refund will be cash or bank transfer',
-      excludedText: 'No products currently excluded from return policy',
-      allProductsText: 'All available phone accessories are returnable and exchangeable',
-      rejection1: 'Expiry of 14-day period',
-      rejection2: 'Product damage or defect due to misuse',
-      rejection3: 'Missing original packaging or accessories',
-      rejection4: 'Product not in resalable condition',
-      contactText: 'For return policy inquiries or to submit a return request, please contact us via:',
-      contactPlaceholder: '📱 Whatapp: 01001225846\n📧 Email: Aymanfaam@gmail.com\n📞 Phone: 01001225846\n🕐 Working Hours: 24 Hors، 7 Days per week',
-      footer: '*Sawa Mob Store management reserves the right to modify this policy at any time without prior notice*'
-    },
-    ar: {
-      title: 'سياسة الاسترجاع والاستبدال - متجر سوا موب',
-      backToHome: 'العودة للرئيسية',
-      returnPeriod: 'مدة الإرجاع',
-      returnConditions: 'شروط الإرجاع والاستبدال',
-      shippingCosts: 'تكاليف الشحن',
-      personalExchange: 'الاستبدال الشخصي',
-      manufacturingDefects: 'العيوب التصنيعية',
-      returnProcess: 'آلية الإرجاع',
-      refundPolicy: 'استرداد الأموال',
-      excludedProducts: 'المنتجات المستثناة',
-      rejectionCases: 'حالات رفض الإرجاع',
-      contact: 'التواصل',
-      returnPeriodText: 'يحق لك إرجاع أو استبدال المنتج خلال **14 يوماً** من تاريخ الاستلام',
-      returnPeriodCalc: 'يتم احتساب المدة من تاريخ التسليم الفعلي للمنتج',
-      condition1: 'يجب أن يكون المنتج في حالته الأصلية دون أي عيوب أو تلف',
-      condition2: 'يجب أن يكون المنتج في العبوة الأصلية مع جميع الملحقات',
-      condition3: 'لا يُقبل إرجاع المنتجات المستخدمة أو التالفة بفعل العميل',
-      personalExchangeText: 'في حالة رغبتك في استبدال المنتج لأسباب شخصية (عدم الإعجاب، تغيير الرأي)',
-      personalExchangeCost: 'العميل يتحمل تكاليف الشحن ذهاباً وإياباً',
-      personalExchangeNote: '**متاح الاستبدال فقط، لا يتم استرداد الأموال**',
-      manufacturingDefectsText: 'في حالة وجود عيب في المنتج أو عدم مطابقته للمواصفات',
-      manufacturingDefectsCost: 'متجر سوا موب يتحمل كامل تكاليف الشحن',
-      step1: 'تواصل معنا خلال فترة الـ 14 يوم عبر وسائل الاتصال المتاحة',
-      step2: 'اذكر رقم الطلب وسبب الإرجاع',
-      step3: 'سيتم تحديد موعد لاستلام المنتج أو إرساله',
-      step4: 'بعد فحص المنتج، سيتم الموافقة على الإرجاع أو رفضه',
-      personalRefund: 'في حالة الاستبدال لأسباب شخصية، يتم استبدال المنتج فقط',
-      personalRefundNote: '**لا يتم استرداد الأموال في هذه الحالة**',
-      manufacturingRefund: 'يتم استرداد الأموال خلال 7-14 يوم عمل من تاريخ الموافقة على الإرجاع',
-      manufacturingRefundNote: 'يتم الاسترداد بناءً على بوليسة الشحن المرفقة مع المنتج',
-      shippingDeduction: '**سيتم خصم تكلفة الشحن من المبلغ المسترد**',
-      cashRefund: 'في حالة الدفع عند الاستلام، سيتم الاسترداد نقداً أو تحويل بنكي',
-      excludedText: 'لا توجد منتجات مستثناة من سياسة الإرجاع حالياً',
-      allProductsText: 'جميع اكسسوارات الهواتف المتوفرة قابلة للإرجاع والاستبدال',
-      rejection1: 'انتهاء فترة الـ 14 يوم',
-      rejection2: 'وجود تلف أو عيب بالمنتج بسبب سوء الاستخدام',
-      rejection3: 'عدم وجود العبوة الأصلية أو الملحقات',
-      rejection4: 'المنتج في حالة غير قابلة للبيع مرة أخرى',
-      contactText: 'للاستفسارات حول سياسة الإرجاع أو تقديم طلب إرجاع، يرجى التواصل معنا عبر:',
-      contactPlaceholder: '📱 واتساب: 01001225846\n📧 إيميل: Aymanfaam@gmail.com\n📞 هاتف: 01001225846\n🕐 ساعات العمل: 24 ساعة، 7 أيام في الأسبوع',
-      footer: '*تحتفظ إدارة متجر سوا موب بالحق في تعديل هذه السياسة في أي وقت دون إشعار مسبق*'
-    }
-  };
+  const translations ={
+  "en": {
+    "title": "Exchange & Return Policy - Alive Food",
+    "backToHome": "Back to Home",
+    "returnPeriod": "Exchange & Return Period",
+    "returnPeriodText": "The exchange or return period is valid **only upon receipt of the product** if it is found to be damaged or spoiled.",
+    "returnPeriodCalc": "No returns are accepted after the customer receives the product from the delivery representative, as we are not responsible for improper storage or use.",
+    "returnConditions": "Exchange & Return Conditions",
+    "condition1": "The exchange is limited to products that are damaged or spoiled upon arrival.",
+    "condition2": "The customer must verify the product's condition in the presence of the delivery representative.",
+    "condition3": "The product must be unused and in its original state upon receipt.",
+    "shippingCosts": "Shipping Costs",
+    "manufacturingDefects": "Damaged or Spoiled Products",
+    "manufacturingDefectsText": "In case the product is damaged or spoiled upon arrival.",
+    "manufacturingDefectsCost": "Alive Food store bears all shipping and exchange costs.",
+    "returnProcess": "Exchange Process",
+    "step1": "The customer must report the damage or spoilage immediately to the delivery representative upon receipt.",
+    "step2": "The representative will take the product back and a new, intact product will be delivered.",
+    "step3": "A new delivery date will be scheduled for the replacement.",
+    "step4": "No further action is required from the customer beyond reporting the issue at the time of delivery.",
+    "refundPolicy": "Refund Policy",
+    "personalRefund": "No refunds are issued as we do not accept returns after receipt.",
+    "manufacturingRefund": "A full refund will be processed only in case of failure to provide a replacement for a damaged or spoiled product.",
+    "manufacturingRefundNote": "Refunds are processed within 7-14 business days from the refund approval date.",
+    "excludedProducts": "Excluded Products",
+    "excludedText": "All products are subject to the exchange policy in case of damage upon receipt.",
+    "rejectionCases": "Rejection Cases",
+    "rejection1": "The customer accepts the product from the delivery representative, even if it is damaged.",
+    "rejection2": "Damage to the product due to improper storage or use after receipt.",
+    "rejection3": "The customer fails to report the damage at the time of delivery.",
+    "contact": "Contact",
+    "contactText": "For any inquiries about our policy or to report a damaged product, please contact us via:",
+    "contactPlaceholder": "📱 WhatsApp: +996542714708\n📧 Email: info@alivefood.store\n📞 Phone: +996542714708\n🕐 Working Hours: 24 hours, 7 days a week",
+    "footer": "Alive Food management reserves the right to modify this policy at any time without prior notice."
+  },
+  "ar": {
+    "title": "سياسة الاستبدال والاسترجاع - Alive Food",
+    "backToHome": "العودة للرئيسية",
+    "returnPeriod": "مدة الاستبدال والاسترجاع",
+    "returnPeriodText": "مدة الاستبدال أو الاسترجاع تكون متاحة **فقط عند استلام المنتج** في حالة وجود تلف أو فساد ظاهر عليه.",
+    "returnPeriodCalc": "لا يتم قبول الإرجاع بعد استلام العميل للمنتج من مندوب التوصيل، حيث لا نتحمل مسؤولية سوء التخزين أو الاستخدام.",
+    "returnConditions": "شروط الاستبدال والاسترجاع",
+    "condition1": "يقتصر الاستبدال على المنتجات التي تصل تالفة أو فاسدة.",
+    "condition2": "يجب على العميل التحقق من حالة المنتج بحضور مندوب التوصيل.",
+    "condition3": "يجب أن يكون المنتج غير مستخدم وفي حالته الأصلية عند الاستلام.",
+    "shippingCosts": "تكاليف الشحن",
+    "manufacturingDefects": "المنتجات التالفة أو الفاسدة",
+    "manufacturingDefectsText": "في حالة وصول المنتج تالفًا أو فاسدًا.",
+    "manufacturingDefectsCost": "يتحمل متجر Alive Food كامل تكاليف الشحن والاستبدال.",
+    "returnProcess": "آلية الاستبدال",
+    "step1": "يجب على العميل إبلاغ مندوب التوصيل فورًا عن أي تلف أو فساد عند الاستلام.",
+    "step2": "سيقوم المندوب باسترجاع المنتج وسيتم توصيل منتج جديد سليم.",
+    "step3": "سيتم تحديد موعد جديد لتسليم المنتج البديل.",
+    "step4": "لا يُطلب من العميل أي إجراء إضافي بعد إبلاغ المندوب وقت التسليم.",
+    "refundPolicy": "استرداد الأموال",
+    "personalRefund": "لا يتم استرداد الأموال لأننا لا نقبل الإرجاع بعد الاستلام.",
+    "manufacturingRefund": "يتم استرداد المبلغ بالكامل فقط في حالة عدم توفر بديل للمنتج التالف أو الفاسد.",
+    "manufacturingRefundNote": "يتم استرداد الأموال خلال 7-14 يوم عمل من تاريخ الموافقة على الاسترداد.",
+    "excludedProducts": "المنتجات المستثناة",
+    "excludedText": "جميع منتجاتنا تخضع لسياسة الاستبدال في حال وجود تلف عند الاستلام.",
+    "rejectionCases": "حالات رفض الإرجاع",
+    "rejection1": "إذا استلم العميل المنتج من المندوب وهو تالف.",
+    "rejection2": "حدوث تلف للمنتج بسبب سوء التخزين أو الاستخدام بعد الاستلام.",
+    "rejection3": "عدم إبلاغ العميل عن التلف وقت الاستلام.",
+    "contact": "التواصل",
+    "contactText": "للاستفسار عن سياستنا أو لتقديم بلاغ عن منتج تالف، يرجى التواصل معنا عبر:",
+    "contactPlaceholder": "📱 واتساب: +996542714708\n📧 إيميل: info@alivefood.store\n📞 هاتف: +996542714708\n🕐 ساعات العمل: 24 ساعة، 7 أيام في الأسبوع",
+    "footer": "تحتفظ إدارة Alive Food بالحق في تعديل هذه السياسة في أي وقت دون إشعار مسبق."
+  }
+};
 
   const t = (key: string) => translations[language][key] || key;
 
@@ -160,47 +142,7 @@ const ReturnPolicyPage = () => {
             </ul>
           </div>
 
-          {/* Shipping Costs Section */}
-          <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-            <div className="flex items-center gap-3 mb-4">
-              <CreditCard className="w-6 h-6 text-green-600" />
-              <h2 className="text-2xl font-bold text-gray-800">{t('shippingCosts')}</h2>
-            </div>
-            
-            <div className="space-y-6">
-              <div className="bg-blue-50 rounded-lg p-4">
-                <h3 className="text-lg font-semibold text-blue-800 mb-2">{t('personalExchange')}</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-600 mt-1">•</span>
-                    <span>{t('personalExchangeText')}</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-600 mt-1">•</span>
-                    <span>{t('personalExchangeCost')}</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-600 mt-1">•</span>
-                    <span>{t('personalExchangeNote')}</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-green-50 rounded-lg p-4">
-                <h3 className="text-lg font-semibold text-green-800 mb-2">{t('manufacturingDefects')}</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-600 mt-1">•</span>
-                    <span>{t('manufacturingDefectsText')}</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-600 mt-1">•</span>
-                    <span>{t('manufacturingDefectsCost')}</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          
 
           {/* Return Process Section */}
           <div className="bg-white rounded-lg shadow-md p-6 mb-8">
@@ -243,10 +185,6 @@ const ReturnPolicyPage = () => {
                     <span className="text-blue-600 mt-1">•</span>
                     <span>{t('personalRefund')}</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-600 mt-1">•</span>
-                    <span>{t('personalRefundNote')}</span>
-                  </li>
                 </ul>
               </div>
 
@@ -261,14 +199,7 @@ const ReturnPolicyPage = () => {
                     <span className="text-green-600 mt-1">•</span>
                     <span>{t('manufacturingRefundNote')}</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-600 mt-1">•</span>
-                    <span>{t('shippingDeduction')}</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-600 mt-1">•</span>
-                    <span>{t('cashRefund')}</span>
-                  </li>
+                  
                 </ul>
               </div>
             </div>
@@ -285,10 +216,7 @@ const ReturnPolicyPage = () => {
                 <span className="text-green-600 mt-1">•</span>
                 <span>{t('excludedText')}</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-600 mt-1">•</span>
-                <span>{t('allProductsText')}</span>
-              </li>
+              
             </ul>
           </div>
 
@@ -311,10 +239,7 @@ const ReturnPolicyPage = () => {
                 <span className="text-red-600 mt-1">•</span>
                 <span>{t('rejection3')}</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-red-600 mt-1">•</span>
-                <span>{t('rejection4')}</span>
-              </li>
+              
             </ul>
           </div>
 

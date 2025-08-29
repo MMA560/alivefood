@@ -7,7 +7,7 @@ const AboutUsPage = () => {
 
   const translations = {
     en: {
-      title: 'About Us - Sawa Mob Store',
+      title: 'About Us - Alive Food Store',
       backToHome: 'Back to Home',
       aboutStore: 'About the Store',
       ourVision: 'Our Vision',
@@ -20,71 +20,71 @@ const AboutUsPage = () => {
       contactUs: 'Contact Us',
       thankYou: 'Thank You for Your Trust',
       
-      aboutStoreText: 'Sawa Store is your first destination for the latest and best mobile phone accessories in Egypt. We believe that a mobile phone is not just a device, but part of your personality and lifestyle.',
+      aboutStoreText: 'Alive Food is not just a store, but a journey towards health and vitality. We believe that food is the source of energy and healing, so we offer you natural food products rich in nutrients, carefully prepared to enhance your health from within. We specialize in fermented foods rich in probiotics, natural collagen supplements, healthy cold-pressed juices, and live sprouts.',
       
-      visionText: 'To be the first choice for everyone looking for high-quality mobile phone accessories in Egypt, providing an exceptional shopping experience that combines quality and fair pricing.',
+      visionText: 'To be the trusted partner and first destination for everyone seeking to adopt a healthy and balanced lifestyle, by providing vital and innovative food products.',
       
-      missionText: 'We are committed to providing a diverse range of mobile phone accessories with the highest quality standards and competitive prices, with excellent customer service and fast, secure delivery throughout Egypt.',
+      missionText: 'To provide the best high-quality natural products, made with love and passion, to nourish your bodies and minds, while spreading awareness about the importance of living food in achieving sustainable health.',
       
-      feature1: 'Wide Selection',
-      feature1Text: 'We provide the latest accessories for leading brands',
-      feature2: 'Guaranteed Quality',
-      feature2Text: 'We carefully select our products from the best suppliers',
-      feature3: 'Competitive Prices',
-      feature3Text: 'We offer the best value for money',
-      feature4: 'Fast Delivery',
-      feature4Text: 'Professional delivery service in 4-6 days',
-      feature5: '24/7 Customer Service',
-      feature5Text: 'Continuous technical support throughout the week',
+      feature1: 'Ingredient Quality',
+      feature1Text: 'We use the finest natural and organic ingredients to ensure the highest levels of quality and effectiveness',
+      feature2: 'Expertise & Professionalism',
+      feature2Text: 'Our products are carefully prepared by experts in nutrition and living foods',
+      feature3: 'Authenticity & Innovation',
+      feature3Text: 'We offer traditional fermented recipes plus new innovations for modern needs',
+      feature4: 'Fast & Safe Delivery',
+      feature4Text: 'We ensure our fresh and vital products reach you quickly and in perfect condition',
+      feature5: 'Support & Follow-up',
+      feature5Text: 'We provide nutritional advice to help you get maximum benefit from our products',
       feature6: 'Smart Inventory Management',
-      feature6Text: 'Automatic system ensures products are always available',
+      feature6Text: 'Automatic system ensures vital products are always available',
       
-      productsText: 'We offer a comprehensive range of mobile phone accessories including:',
-      product1: 'Protection devices and cases',
-      product2: 'Chargers and cables',
-      product3: 'Phone holders',
-      product4: 'Power banks',
-      product5: 'Screen protectors',
-      product6: 'And many other accessories',
+      productsText: 'We offer a comprehensive range of products that enhance your health and vitality, including:',
+      product1: 'Fermented foods and probiotics',
+      product2: 'Natural collagen supplements',
+      product3: 'Cold-pressed healthy juices',
+      product4: 'Live sprouts',
+      product5: 'Natural food products',
+      product6: 'And many other health-enhancing items',
       
-      commitmentText: 'We understand that customer satisfaction is the foundation of our success, so we commit to:',
-      commitment1: 'Providing high-quality products',
-      commitment2: 'Excellent and responsive customer service',
-      commitment3: 'Flexible return and exchange policy',
-      commitment4: 'Transparent pricing with no hidden costs',
-      commitment5: 'Protecting customer data and privacy',
+      commitmentText: 'We are committed to providing the best possible experience, so we promise you:',
+      commitment1: 'Unmatched quality with strict quality control',
+      commitment2: 'Exceptional customer service always ready to help',
+      commitment3: 'Flexible return policy because your satisfaction is our priority',
+      commitment4: 'Complete transparency in ingredients and pricing with no hidden costs',
+      commitment5: 'Data protection and privacy security is our responsibility',
       
       value1: 'Quality',
-      value1Text: 'We select each product with extreme care',
-      value2: 'Trust',
-      value2Text: 'We build long-term relationships with our customers',
-      value3: 'Transparency',
-      value3Text: 'We deal clearly in all our transactions',
+      value1Text: 'The foundation of everything we offer',
+      value2: 'Transparency',
+      value2Text: 'We believe in clarity at every step',
+      value3: 'Health Awareness',
+      value3Text: 'We strive to spread knowledge about the importance of nutrition',
       value4: 'Innovation',
-      value4Text: 'We always strive to improve the shopping experience',
-      value5: 'Professionalism',
-      value5Text: 'We maintain the highest service standards',
+      value4Text: 'Always seeking new ways to provide greater value to our customers',
+      value5: 'Passion',
+      value5Text: 'Every product is made with passion and love for health',
       
-      service1: 'Free Delivery',
-      service1Text: 'On orders above a certain limit',
-      service2: 'Secure Payment',
-      service2Text: 'Multiple and secure payment methods',
-      service3: 'Free Consultation',
-      service3Text: 'Expert team to help you choose',
-      service4: 'Warranty',
-      service4Text: 'Warranty on all products according to supplier',
-      service5: 'Follow-up',
-      service5Text: 'We follow up with you until your order arrives safely',
+      service1: 'Free Nutritional Consultation',
+      service1Text: 'Our team of experts is ready to help you choose the right products',
+      service2: 'Fast Delivery',
+      service2Text: 'We ensure your order arrives fresh and on time',
+      service3: 'Continuous Technical Support',
+      service3Text: 'We are here to answer all your questions',
+      service4: 'Quality Guarantee',
+      service4Text: 'Every product undergoes strict quality control',
+      service5: 'Follow-up Service',
+      service5Text: 'We follow up with you to ensure maximum benefit from our products',
       
       contactText: 'We are here to serve you always. Contact us via:',
-      contactInfo: '📱 WhatsApp: 01001225846\n📧 Email: Aymanfaam@gmail.com\n📞 Phone: 01001225846\n🕐 Working Hours: 24 hours, 7 days a week',
+      contactInfo: '📱 WhatsApp: +996542714708\n📧 Email: info@alivefood.store\n📞 Phone: +996542714708\n🕐 Working Hours: 24 hours, 7 days a week',
       
-      thankYouText: 'Thank you for choosing Sawa Store. We appreciate your trust in us and promise to provide the best shopping experience possible. Together, we make your phone reflect your unique personality.',
+      thankYouText: 'Thank you for choosing Alive Food. We appreciate your trust in us and look forward to being part of your journey towards a healthier and happier life.',
       
-      slogan: 'Sawa Store - Because your phone deserves the best'
+      slogan: 'Alive Food - Because your health is your most precious possession'
     },
     ar: {
-      title: 'من نحن - متجر سوا موب',
+      title: 'من نحن - متجر Alive Food',
       backToHome: 'العودة للرئيسية',
       aboutStore: 'نبذة عن المتجر',
       ourVision: 'رؤيتنا',
@@ -97,68 +97,68 @@ const AboutUsPage = () => {
       contactUs: 'تواصل معنا',
       thankYou: 'شكراً لثقتك',
       
-      aboutStoreText: 'متجر سوا هو وجهتك الأولى للحصول على أحدث وأفضل اكسسوارات الهواتف المحمولة في مصر. نحن نؤمن بأن الهاتف المحمول ليس مجرد جهاز، بل هو جزء من شخصيتك وأسلوب حياتك.',
+      aboutStoreText: '"Alive Food" ليس مجرد متجر، بل هو رحلة نحو الصحة والحيوية. نحن نؤمن بأن الغذاء هو مصدر الطاقة والشفاء، ولذلك نقدم لكم منتجات غذائية طبيعية وغنية بالمغذيات، تم إعدادها بعناية فائقة لتعزز صحتكم من الداخل. متخصصون في الأطعمة المخمرة الغنية بالبروبيوتيك، مكملات الكولاجين الطبيعية، العصائر الصحية المعصورة على البارد، والمبرعمات الحيوية.',
       
-      visionText: 'أن نكون الخيار الأول لكل من يبحث عن اكسسوارات الهواتف المحمولة عالية الجودة في مصر، مع توفير تجربة تسوق استثنائية تجمع بين الجودة والسعر المناسب.',
+      visionText: 'أن نكون الشريك الموثوق والوجهة الأولى لكل من يسعى لتبني نمط حياة صحي ومتوازن، من خلال توفير منتجات غذائية حيوية ومبتكرة.',
       
-      missionText: 'نلتزم بتوفير مجموعة متنوعة من اكسسوارات الهواتف المحمولة بأعلى معايير الجودة وبأسعار تنافسية، مع خدمة عملاء متميزة وتوصيل سريع وآمن لجميع أنحاء مصر.',
+      missionText: 'تقديم أفضل المنتجات الطبيعية عالية الجودة، المصنوعة بحب وشغف، لتغذية أجسامكم وعقولكم، مع نشر الوعي حول أهمية الغذاء الحي في تحقيق الصحة المستدامة.',
       
-      feature1: 'تشكيلة واسعة',
-      feature1Text: 'نوفر أحدث الاكسسوارات للعلامات التجارية الرائدة',
-      feature2: 'جودة مضمونة',
-      feature2Text: 'نختار منتجاتنا بعناية من أفضل الموردين',
-      feature3: 'أسعار تنافسية',
-      feature3Text: 'نقدم أفضل قيمة مقابل المال',
-      feature4: 'توصيل سريع',
-      feature4Text: 'خدمة توصيل احترافية في 4-6 أيام',
-      feature5: 'خدمة عملاء 24/7',
-      feature5Text: 'دعم فني متواصل طوال أيام الأسبوع',
+      feature1: 'جودة المكونات',
+      feature1Text: 'نستخدم أجود المكونات الطبيعية والعضوية لضمان أعلى مستويات الجودة والفعالية',
+      feature2: 'خبرة واحترافية',
+      feature2Text: 'منتجاتنا يتم تحضيرها بعناية من قبل خبراء في التغذية والأغذية الحيوية',
+      feature3: 'أصالة وتجديد',
+      feature3Text: 'نقدم وصفات تقليدية ومخمرة غنية، بالإضافة إلى ابتكارات جديدة تناسب احتياجاتكم العصرية',
+      feature4: 'توصيل سريع وآمن',
+      feature4Text: 'نضمن وصول منتجاتنا الطازجة والحيوية إليك في أسرع وقت وبأفضل حالة',
+      feature5: 'دعم ومتابعة',
+      feature5Text: 'نقدم نصائح غذائية لمساعدتك في تحقيق أقصى استفادة من منتجاتنا',
       feature6: 'إدارة مخزون ذكية',
-      feature6Text: 'نظام تلقائي يضمن توفر المنتجات دائماً',
+      feature6Text: 'نظام تلقائي يضمن توفر المنتجات الحيوية دائماً',
       
-      productsText: 'نقدم مجموعة شاملة من اكسسوارات الهواتف المحمولة تشمل:',
-      product1: 'أجهزة الحماية والكفرات',
-      product2: 'الشواحن والكابلات',
-      product3: 'حوامل الهواتف',
-      product4: 'بطاريات الطوارئ',
-      product5: 'شاشات الحماية',
-      product6: 'والعديد من الاكسسوارات الأخرى',
+      productsText: 'نقدم مجموعة شاملة من المنتجات التي تعزز صحتك وحيويتك، وتشمل:',
+      product1: 'المخمرات والبروبيوتيك',
+      product2: 'مكملات الكولاجين الطبيعية',
+      product3: 'العصائر الصحية المعصورة على البارد',
+      product4: 'المبرعمات الحيوية',
+      product5: 'منتجات غذائية طبيعية',
+      product6: 'والعديد من المنتجات الأخرى المعززة للصحة',
       
-      commitmentText: 'نحن نفهم أن رضا العملاء هو أساس نجاحنا، لذلك نلتزم بـ:',
-      commitment1: 'توفير منتجات عالية الجودة',
-      commitment2: 'خدمة عملاء متميزة ومتجاوبة',
-      commitment3: 'سياسة إرجاع واستبدال مرنة',
-      commitment4: 'أسعار شفافة بدون تكاليف خفية',
-      commitment5: 'حماية بيانات العملاء والخصوصية',
+      commitmentText: 'نحن ملتزمون بتقديم أفضل تجربة ممكنة، ولذلك نعدكم بـ:',
+      commitment1: 'جودة لا تضاهى مع رقابة جودة صارمة',
+      commitment2: 'خدمة عملاء استثنائية على استعداد دائم للمساعدة',
+      commitment3: 'سياسة إرجاع مرنة لأن رضاكم هو أولويتنا',
+      commitment4: 'شفافية كاملة في المكونات والأسعار، لا توجد أي تكاليف خفية',
+      commitment5: 'حماية البيانات وأمان الخصوصية هي مسؤوليتنا',
       
       value1: 'الجودة',
-      value1Text: 'نختار كل منتج بعناية فائقة',
-      value2: 'الثقة',
-      value2Text: 'نبني علاقات طويلة الأمد مع عملائنا',
-      value3: 'الشفافية',
-      value3Text: 'نتعامل بوضوح في جميع معاملاتنا',
+      value1Text: 'هي أساس كل ما نقدمه',
+      value2: 'الشفافية',
+      value2Text: 'نؤمن بالوضوح في كل خطوة',
+      value3: 'الوعي الصحي',
+      value3Text: 'نسعى لنشر المعرفة حول أهمية الغذاء',
       value4: 'الابتكار',
-      value4Text: 'نسعى دائماً لتحسين تجربة التسوق',
-      value5: 'الاحترافية',
-      value5Text: 'نحافظ على أعلى معايير الخدمة',
+      value4Text: 'دائماً نبحث عن طرق جديدة لتقديم قيمة أكبر لعملائنا',
+      value5: 'الشغف',
+      value5Text: 'كل منتج مصنوع بشغف وحب للصحة',
       
-      service1: 'التوصيل المجاني',
-      service1Text: 'على الطلبات التي تزيد عن حد معين',
-      service2: 'الدفع الآمن',
-      service2Text: 'طرق دفع متعددة وآمنة',
-      service3: 'الاستشارة المجانية',
-      service3Text: 'فريق خبراء لمساعدتك في الاختيار',
-      service4: 'الضمان',
-      service4Text: 'ضمان على جميع المنتجات حسب المورد',
-      service5: 'المتابعة',
-      service5Text: 'نتابع معك حتى وصول طلبك بأمان',
+      service1: 'استشارات غذائية مجانية',
+      service1Text: 'فريقنا من الخبراء جاهز لمساعدتك في اختيار المنتجات الأنسب لك',
+      service2: 'التوصيل السريع',
+      service2Text: 'نضمن وصول طلبك طازجًا وفي الوقت المحدد',
+      service3: 'دعم فني مستمر',
+      service3Text: 'نحن هنا للإجابة على جميع أسئلتك',
+      service4: 'ضمان الجودة',
+      service4Text: 'كل منتج يخضع لرقابة جودة صارمة',
+      service5: 'خدمة المتابعة',
+      service5Text: 'نتابع معك لضمان تحقيق أقصى استفادة من منتجاتنا',
       
       contactText: 'نحن هنا لخدمتك دائماً. تواصل معنا عبر:',
-      contactInfo: '📱 واتساب: 01001225846\n📧 إيميل: Aymanfaam@gmail.com\n📞 هاتف: 01001225846\n🕐 ساعات العمل: 24 ساعة، 7 أيام في الأسبوع',
+      contactInfo: '📱 واتساب: +996542714708\n📧 إيميل: info@alivefood.store\n📞 هاتف: +996542714708\n🕐 ساعات العمل: 24 ساعة، 7 أيام في الأسبوع',
       
-      thankYouText: 'نشكرك على اختيارك متجر سوا. نحن نقدر ثقتك بنا ونعدك بتقديم أفضل تجربة تسوق ممكنة. معاً، نجعل هاتفك يعكس شخصيتك الفريدة.',
+      thankYouText: 'نشكرك على اختيار "Alive Food". نحن نقدر ثقتك فينا ونتطلع لأن نكون جزءًا من رحلتك نحو حياة أكثر صحة وسعادة.',
       
-      slogan: 'متجر سوا - لأن هاتفك يستحق الأفضل'
+      slogan: 'Alive Food - لأن صحتك هي أغلى ما تملك'
     }
   };
 

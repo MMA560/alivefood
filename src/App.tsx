@@ -88,10 +88,7 @@ const App = () => (
                       element={<GeographyPage />}
                     />
                     <Route path="analytics/events" element={<EventsPage />} />
-                    <Route
-                      path="currencies"
-                      element={<CurrencyManagement />}
-                    />
+                    <Route path="currencies" element={<CurrencyManagement />} />
                     <Route
                       path="settings/account"
                       element={<AccountSettings />}
@@ -105,19 +102,6 @@ const App = () => (
                       element={<HeroSliderManagement />}
                     />
                   </Route>
-                  <Route
-                    path="/return-policies"
-                    element={<ReturnPolicyPage />}
-                  />
-                  <Route path="/about-us" element={<AboutUsPage />} />
-                  <Route
-                    path="/terms-and-conditions"
-                    element={<TermsConditionsPage />}
-                  />
-                  <Route
-                    path="/privacy-policy"
-                    element={<PrivacyPolicyPage />}
-                  />
 
                   {/* Regular routes with header/footer */}
                   <Route
@@ -147,6 +131,19 @@ const App = () => (
                               element={<ThankYouPage />}
                             />
                             <Route path="*" element={<NotFound />} />
+                            <Route
+                              path="/return-policies"
+                              element={<ReturnPolicyPage />}
+                            />
+                            <Route path="/about-us" element={<AboutUsPage />} />
+                            <Route
+                              path="/terms-and-conditions"
+                              element={<TermsConditionsPage />}
+                            />
+                            <Route
+                              path="/privacy-policy"
+                              element={<PrivacyPolicyPage />}
+                            />
                           </Routes>
                         </main>
                         <Footer />
