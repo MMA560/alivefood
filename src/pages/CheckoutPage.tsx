@@ -357,7 +357,7 @@ const CheckoutPage = () => {
                           <div className="flex-1">
                             <div className="flex items-center gap-3 mb-2">
                               <h3 className="font-bold text-green-800 text-lg">
-                                {isRTL ? "الدفع عند الاستلام" : "Cash on Delivery"}
+                                {isRTL ? "الدفع عن طريق التواصل" : "Payment by contact"}
                               </h3>
                               <Badge className="bg-green-600 text-white px-3 py-1 rounded-full">
                                 <Check className="w-3 h-3 mr-1" />
@@ -366,8 +366,8 @@ const CheckoutPage = () => {
                             </div>
                             <p className="text-green-700 font-medium">
                               {isRTL
-                                ? "ادفع عند وصول الطلب إليك"
-                                : "Pay when your order arrives"}
+                                ? "سيتم التواصل معك للدفع"
+                                : "You will be connectet for payment"}
                             </p>
                           </div>
                         </div>
@@ -387,8 +387,8 @@ const CheckoutPage = () => {
                           </p>
                           <p className="text-blue-700">
                             {isRTL
-                              ? "يرجى التأكد من توفر المبلغ الكامل عند الاستلام"
-                              : "Please ensure you have the full amount ready upon delivery"}
+                              ? "الدفع يتم مسبقا حيث ان المنتجات تصمم خصيصا لك."
+                              : "Payment is made in advance as the products are custom-designed for you."}
                           </p>
                         </div>
                       </div>
@@ -521,7 +521,7 @@ const CheckoutPage = () => {
                       <div className="flex items-center gap-2">
                         <Truck className="w-4 h-4 text-blue-600" />
                         <span className="text-blue-800 font-bold">
-                          {isRTL ? "الدفع عند الاستلام" : "Cash on Delivery"}
+                          {isRTL ? "سيتم التوصل معك لتاكيد الدفع" : "You will be contacted to confirm payment."}
                         </span>
                       </div>
                     </div>
