@@ -4,6 +4,9 @@ import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Lock, User, Eye, EyeOff } from 'lucide-react';
 
+// ✅ Platform Secret ثابت للنظام - قوي ومشفر
+const PLATFORM_SECRET = "sk_prod_9K7mN2pQ5rT8vX3wY6zA4bC1dE0fG9hJ2kL5mN8pQ1rT4vX7wY0zA3bC6dE9fG";
+
 const AdminLoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -31,26 +34,29 @@ const AdminLoginPage = () => {
       const response = await fetch('https://admins-manager.vercel.app/api/v1/users/token', {
         method: 'POST',
         body: formData,
-        headers: { 'Accept': 'application/json' },
+        headers: { 
+          'Accept': 'application/json',
+          'X-Platform-Secret': PLATFORM_SECRET  // ✅ إضافة السيكرت في الـ Header
+        },
         mode: 'cors'
       });
 
       const data = await response.json();
 
       if (response.ok) {
-        // حفظ التوكن
         try {
           localStorage.setItem('adminToken', data.access_token);
         } catch (e) {
           (window as any).adminToken = data.access_token;
         }
         
-        // التوجيه المباشر
         window.location.replace('/admin/dashboard');
         
       } else {
         if (response.status === 401) {
           setMessage("البريد الإلكتروني أو كلمة المرور غير صحيحة");
+        } else if (response.status === 403) {
+          setMessage("خطأ في التحقق من النظام");  // ✅ رسالة خطأ السيكرت
         } else {
           setMessage("حدث خطأ أثناء تسجيل الدخول");
         }
@@ -67,7 +73,6 @@ const AdminLoginPage = () => {
       handleLogin(e);
     }
   };
-
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-gray-100 p-4">
       <Card className="w-full max-w-md shadow-lg border-0">
