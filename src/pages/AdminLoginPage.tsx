@@ -177,13 +177,7 @@ const AdminLoginPage = () => {
               )}
             </Button>
 
-            <div className="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200" dir="rtl">
-              <p className="text-sm text-gray-700 text-center font-medium mb-2">بيانات تجريبية:</p>
-              <div className="space-y-1 text-sm text-gray-600 text-center">
-                <p><span className="font-medium">البريد:</span> user@example.com</p>
-                <p><span className="font-medium">كلمة المرور:</span> Admin123123</p>
-              </div>
-            </div>
+            
           </div>
         </CardContent>
       </Card>
