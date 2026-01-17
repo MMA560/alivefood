@@ -41,11 +41,11 @@ const NavigationTabs: React.FC<NavigationTabsProps> = ({
     icon: Sparkles,
   };
 
-  // باقي التابات
+  // باقي التابات - مع تقديم Images قبل Pricing
   const baseTabs = [
     { id: "basic", name: "المعلومات الأساسية", icon: Package },
+    { id: "images", name: "الصور", icon: Camera }, // ← تقدمت هنا
     { id: "pricing", name: "الأسعار والمتغيرات", icon: DollarSign },
-    { id: "images", name: "الصور", icon: Camera },
     { id: "video", name: "الفيديو", icon: Video },
     { id: "details", name: "التفاصيل التقنية", icon: Settings },
     { id: "content", name: "المحتوى الإضافي", icon: FileText },
@@ -58,8 +58,8 @@ const NavigationTabs: React.FC<NavigationTabsProps> = ({
   const hasTabErrors = (tabId: string): boolean => {
     const tabFieldsMap: { [key: string]: string[] } = {
       basic: ["title", "category", "description"],
-      pricing: ["price"],
       images: ["images"],
+      pricing: ["price", "base_price", "variants"],
       details: [],
       content: [],
       faq: [],

@@ -3,11 +3,17 @@ import { useParams, useLocation } from "react-router-dom";
 import { Save, CheckCircle, AlertCircle, X } from "lucide-react";
 
 import {
-  ValidationErrors,
-  FormData,
   productsApi,
   ProductCreate,
 } from "@/lib/api";
+
+// استيراد مكتبة الـ Validation الجديدة
+import {
+  validateProductForm,
+  cleanCategoriesData,
+  FormData,
+  ValidationErrors,
+} from "@/lib/productValidation";
 
 import ErrorNotification from "@/components/admin/EditProduct/ErrorNotifications";
 import NavigationTabs from "@/components/admin/EditProduct/NavigationTabs";
@@ -286,6 +292,7 @@ const EditProductPage: React.FC = () => {
         [field]: value,
       }));
 
+      // إزالة الخطأ من الحقل المُعدّل
       if (errors[field]) {
         setErrors((prev) => ({
           ...prev,
@@ -315,177 +322,219 @@ const EditProductPage: React.FC = () => {
         ...prev,
         [arrayName]: newArray,
       }));
+
+      // إزالة الخطأ من الحقل المُعدّل
+      if (errors[arrayName as string]) {
+        setErrors((prev) => ({
+          ...prev,
+          [arrayName as string]: null,
+        }));
+      }
     },
-    []
+    [errors]
   );
 
+  /**
+   * التحقق الشامل من صحة النموذج
+   * استخدام مكتبة الـ Validation الجديدة
+   */
   const validateForm = (): boolean => {
-    const newErrors: ValidationErrors = {};
+    console.log("🔍 بدء التحقق الشامل من البيانات...");
+    console.log("📋 البيانات المُدخلة:", formData);
 
-    if (!formData.title?.trim()) {
-      newErrors.title = "العنوان مطلوب";
-    }
+    // استخدام دالة التحقق الشاملة
+    const validationErrors = validateProductForm(formData, isEditing);
 
-    if (!formData.category?.trim()) {
-      newErrors.category = "الفئة مطلوبة";
-    }
+    console.log("📊 نتائج التحقق:", validationErrors);
 
-    if (!formData.price?.trim()) {
-      newErrors.price = "السعر مطلوب";
-    } else if (isNaN(Number(formData.price)) || Number(formData.price) <= 0) {
-      newErrors.price = "السعر يجب أن يكون رقم صحيح أكبر من صفر";
-    }
+    setErrors(validationErrors);
 
-    if (!formData.description?.trim()) {
-      newErrors.description = "الوصف مطلوب";
-    }
+    const errorCount = Object.keys(validationErrors).filter(
+      key => validationErrors[key] !== null
+    ).length;
 
-    if (!Array.isArray(formData.images) || formData.images.length === 0) {
-      newErrors.images = "يجب إضافة صورة واحدة على الأقل";
-    }
-
-    setErrors(newErrors);
-
-    if (Object.keys(newErrors).length > 0) {
+    if (errorCount > 0) {
+      console.error(`❌ تم العثور على ${errorCount} خطأ في البيانات`);
+      
       addToast(
         "error",
-        "خطأ في البيانات",
+        `تم العثور على ${errorCount} خطأ`,
         "يرجى تصحيح الأخطاء المطلوبة قبل الحفظ"
       );
+
+      // التمرير إلى أول خطأ
+      const firstErrorField = Object.keys(validationErrors)[0];
+      if (firstErrorField) {
+        // تحديد التاب المناسب للخطأ الأول
+        if (['id', 'title', 'category', 'categories', 'description', 'short_description', 'brand', 'sku'].includes(firstErrorField)) {
+          setActiveTab('basic');
+        } else if (['price', 'base_price', 'old_price', 'discount', 'variants'].includes(firstErrorField)) {
+          setActiveTab('pricing');
+        } else if (firstErrorField === 'images') {
+          setActiveTab('images');
+        } else if (firstErrorField.startsWith('details')) {
+          setActiveTab('details');
+        } else if (firstErrorField === 'faq') {
+          setActiveTab('faq');
+        }
+      }
+
       return false;
     }
 
+    console.log("✅ التحقق ناجح - جميع البيانات صحيحة");
     return true;
   };
 
-  // In your EditProductPage component, update the handleSubmit function:
+  /**
+   * دالة الحفظ/التحديث
+   */
+  const handleSubmit = async (): Promise<void> => {
+    console.log("💾 محاولة حفظ المنتج...");
 
-const handleSubmit = async (): Promise<void> => {
-  if (!validateForm()) {
-    return;
-  }
-
-  setIsSaving(true);
-
-  try {
-    if (isEditing && productId) {
-      // تعديل المنتج الموجود
-      console.log("Updating product with data:", formData);
-
-      // تنظيف البيانات قبل الإرسال - تحويل القيم الفارغة إلى null
-      const cleanedFormData = {
-        ...formData,
-        usage_instructions: formData.usage_instructions?.trim() || null,
-        storage_instructions: formData.storage_instructions?.trim() || null,
-        old_price: formData.old_price?.trim() || null,
-        discount: formData.discount?.trim() || null,
-        short_description: formData.short_description?.trim() || null,
-        brand: formData.brand?.trim() || null,
-        sku: formData.sku?.trim() || null,
-        // Fix: Convert category objects to IDs for additional categories
-        categories: formData.categories?.map((cat: any) => 
-          typeof cat === 'string' ? cat : cat.id
-        ) || [],
-      };
-
-      const updatedProduct = await productsApi.updateProduct(
-        productId,
-        cleanedFormData
-      );
-
-      setProductData(updatedProduct);
-
-      addToast(
-        "success",
-        "تم تحديث المنتج بنجاح",
-        "تم حفظ التعديلات على المنتج بنجاح."
-      );
-    } else {
-      // إنشاء منتج جديد
-      console.log("Creating new product with data:", formData);
-
-      const productCreateData: ProductCreate = {
-        id: formData.id,
-        title: formData.title,
-        image: formData.images[0] || "",
-        images: formData.images,
-        category: formData.category,
-        description: formData.description,
-        short_description: formData.short_description?.trim() || undefined,
-        price: Number(formData.price),
-        base_price: Number(formData.base_price),
-        old_price: formData.old_price?.trim()
-          ? Number(formData.old_price)
-          : undefined,
-        discount: formData.discount?.trim()
-          ? Number(formData.discount)
-          : undefined,
-        usage_instructions: formData.usage_instructions?.trim() || undefined,
-        storage_instructions:
-          formData.storage_instructions?.trim() || undefined,
-        details:
-          formData.details.description || formData.details.sections.length > 0
-            ? formData.details
-            : undefined,
-        faq: formData.faq.length > 0 ? formData.faq : undefined,
-        variants:
-          formData.variants.length > 0 ? formData.variants : undefined,
-        // Fix: Send categories as array of strings (IDs only)
-        categories: [
-          formData.category, // Main category
-          ...(formData.categories?.map((cat: any) => 
-            typeof cat === 'string' ? cat : cat.id
-          ) || []) // Additional categories as IDs
-        ].filter(Boolean), // Remove any null/undefined values
-      };
-
-      const createdProduct = await productsApi.createProduct(
-        productCreateData
-      );
-
-      console.log("✅ Product created successfully:", createdProduct);
-
-      setProductData(createdProduct);
-
-      addToast(
-        "success",
-        "تم إنشاء المنتج بنجاح",
-        "تم حفظ المنتج في النظام بنجاح ويمكن للعملاء الآن رؤيته في المتجر."
-      );
+    // التحقق الشامل من البيانات
+    if (!validateForm()) {
+      console.error("❌ فشل التحقق من البيانات - إلغاء الحفظ");
+      return;
     }
-  } catch (error: any) {
-    console.error("❌ Error saving product:", error);
 
-    let errorTitle = isEditing ? "خطأ في تحديث المنتج" : "خطأ في حفظ المنتج";
-    let errorMessage = "حدث خطأ غير متوقع أثناء العملية";
+    setIsSaving(true);
 
-    if (error.message) {
-      if (error.message.includes("already exists")) {
-        errorTitle = "معرف مكرر";
-        errorMessage =
-          "يوجد منتج بهذا المعرف مسبقاً. يرجى استخدام معرف مختلف (SKU).";
-      } else if (error.message.includes("category")) {
-        errorTitle = "فئة غير صحيحة";
-        errorMessage =
-          "الفئة المحددة غير موجودة. يرجى اختيار فئة صحيحة من القائمة.";
-      } else if (error.message.includes("validation")) {
-        errorTitle = "خطأ في التحقق";
-        errorMessage =
-          "يرجى التحقق من صحة جميع البيانات المدخلة والمحاولة مرة أخرى.";
-      } else if (error.message.includes("network")) {
-        errorTitle = "خطأ في الشبكة";
-        errorMessage =
-          "فشل في الاتصال بالخادم. يرجى التحقق من اتصال الإنترنت والمحاولة مرة أخرى.";
+    try {
+      if (isEditing && productId) {
+        // ====== تعديل المنتج الموجود ======
+        console.log("✏️ تحديث منتج موجود:", productId);
+
+        // تنظيف البيانات قبل الإرسال
+        const cleanedFormData = {
+          ...formData,
+          // تحويل الحقول الفارغة إلى null
+          usage_instructions: formData.usage_instructions?.trim() || null,
+          storage_instructions: formData.storage_instructions?.trim() || null,
+          old_price: formData.old_price?.trim() || null,
+          discount: formData.discount?.trim() || null,
+          short_description: formData.short_description?.trim() || null,
+          brand: formData.brand?.trim() || null,
+          sku: formData.sku?.trim() || null,
+          // تنظيف categories - تحويل Objects إلى IDs فقط
+          categories: cleanCategoriesData(formData.categories),
+        };
+
+        console.log("📤 البيانات المُنظفة للتحديث:", cleanedFormData);
+
+        const updatedProduct = await productsApi.updateProduct(
+          productId,
+          cleanedFormData
+        );
+
+        console.log("✅ تم التحديث بنجاح:", updatedProduct);
+
+        setProductData(updatedProduct);
+
+        addToast(
+          "success",
+          "تم تحديث المنتج بنجاح",
+          "تم حفظ التعديلات على المنتج بنجاح."
+        );
       } else {
-        errorMessage = error.message;
-      }
-    }
+        // ====== إنشاء منتج جديد ======
+        console.log("➕ إنشاء منتج جديد");
 
-    addToast("error", errorTitle, errorMessage);
-  } finally {
-    setIsSaving(false);
-  }
-};
+        const productCreateData: ProductCreate = {
+          id: formData.id,
+          title: formData.title,
+          image: formData.images[0] || "",
+          images: formData.images,
+          category: formData.category,
+          description: formData.description,
+          short_description: formData.short_description?.trim() || undefined,
+          price: Number(formData.price),
+          base_price: Number(formData.base_price),
+          old_price: formData.old_price?.trim()
+            ? Number(formData.old_price)
+            : undefined,
+          discount: formData.discount?.trim()
+            ? Number(formData.discount)
+            : undefined,
+          usage_instructions: formData.usage_instructions?.trim() || undefined,
+          storage_instructions:
+            formData.storage_instructions?.trim() || undefined,
+          details:
+            formData.details.description || formData.details.sections.length > 0
+              ? formData.details
+              : undefined,
+          faq: formData.faq.length > 0 ? formData.faq : undefined,
+          variants:
+            formData.variants.length > 0 ? formData.variants : undefined,
+          brand: formData.brand?.trim() || undefined,
+          sku: formData.sku?.trim() || undefined,
+          // تنظيف categories - تحويل كل شيء إلى IDs
+          categories: [
+            formData.category, // الفئة الأساسية
+            ...cleanCategoriesData(formData.categories) // الفئات الإضافية
+          ].filter(Boolean), // إزالة القيم الفارغة
+          videoInfo: formData.videoInfo.videoUrl ? formData.videoInfo : undefined,
+        };
+
+        console.log("📤 بيانات المنتج الجديد:", productCreateData);
+
+        const createdProduct = await productsApi.createProduct(
+          productCreateData
+        );
+
+        console.log("✅ تم الإنشاء بنجاح:", createdProduct);
+
+        setProductData(createdProduct);
+
+        addToast(
+          "success",
+          "تم إنشاء المنتج بنجاح",
+          "تم حفظ المنتج في النظام بنجاح ويمكن للعملاء الآن رؤيته في المتجر."
+        );
+      }
+    } catch (error: any) {
+      console.error("❌ خطأ في حفظ المنتج:", error);
+
+      let errorTitle = isEditing ? "خطأ في تحديث المنتج" : "خطأ في حفظ المنتج";
+      let errorMessage = "حدث خطأ غير متوقع أثناء العملية";
+
+      if (error.message) {
+        if (error.message.includes("already exists")) {
+          errorTitle = "معرف مكرر";
+          errorMessage =
+            "يوجد منتج بهذا المعرف مسبقاً. يرجى استخدام معرف مختلف (ID).";
+        } else if (error.message.includes("category") || error.message.includes("Category")) {
+          errorTitle = "فئة غير صحيحة";
+          errorMessage =
+            "الفئة المحددة غير موجودة. يرجى اختيار فئة صحيحة من القائمة.";
+        } else if (error.message.includes("validation")) {
+          errorTitle = "خطأ في التحقق";
+          errorMessage =
+            "يرجى التحقق من صحة جميع البيانات المدخلة والمحاولة مرة أخرى.";
+        } else if (error.message.includes("network")) {
+          errorTitle = "خطأ في الشبكة";
+          errorMessage =
+            "فشل في الاتصال بالخادم. يرجى التحقق من اتصال الإنترنت والمحاولة مرة أخرى.";
+        } else {
+          errorMessage = error.message;
+        }
+      }
+
+      // إذا كان الخطأ 422 - عرض تفاصيل الـ validation errors
+      if (error.response?.status === 422 && error.response?.data?.detail) {
+        const detail = error.response.data.detail;
+        if (Array.isArray(detail)) {
+          errorMessage = detail.map((err: any) => 
+            `${err.loc?.join(' → ')}: ${err.msg}`
+          ).join('\n');
+        }
+      }
+
+      addToast("error", errorTitle, errorMessage);
+    } finally {
+      setIsSaving(false);
+    }
+  };
 
   const renderTabContent = () => {
     const commonProps = {
@@ -522,7 +571,7 @@ const handleSubmit = async (): Promise<void> => {
   };
 
   const calculateProgress = (): number => {
-    const requiredFields = ["title", "category", "price", "description"];
+    const requiredFields = ["title", "category", "price", "description", "base_price"];
     const filledFields = requiredFields.filter(
       (field) =>
         formData[field as keyof FormData] &&
@@ -530,10 +579,12 @@ const handleSubmit = async (): Promise<void> => {
     );
     const hasImages =
       Array.isArray(formData.images) && formData.images.length > 0;
+    const hasVariants =
+      Array.isArray(formData.variants) && formData.variants.length > 0;
 
     return Math.round(
-      ((filledFields.length + (hasImages ? 1 : 0)) /
-        (requiredFields.length + 1)) *
+      ((filledFields.length + (hasImages ? 1 : 0) + (hasVariants ? 1 : 0)) /
+        (requiredFields.length + 2)) *
         100
     );
   };

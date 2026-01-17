@@ -1,5 +1,11 @@
 import React from 'react';
 import { Plus, X, Settings, Info } from 'lucide-react';
+import {
+  validateDetailsSections,
+  preventDangerousCharacters,
+  handleTextPaste,
+  cleanTextValue,
+} from '@/lib/productValidation';
 
 const ProductDetails = ({ formData, onNestedChange, errors }) => {
   const addDetailSection = () => {
@@ -10,44 +16,51 @@ const ProductDetails = ({ formData, onNestedChange, errors }) => {
     onNestedChange('details', 'sections', newSections);
   };
 
-  const updateSectionTitle = (sectionIndex, title) => {
+  const updateSectionTitle = (sectionIndex: number, title: string) => {
     const newSections = [...formData.details.sections];
-    newSections[sectionIndex].title = title;
+    newSections[sectionIndex].title = cleanTextValue(title);
     onNestedChange('details', 'sections', newSections);
   };
 
-  const updateSectionItem = (sectionIndex, itemIndex, value) => {
+  const updateSectionItem = (sectionIndex: number, itemIndex: number, value: string) => {
     const newSections = [...formData.details.sections];
-    newSections[sectionIndex].items[itemIndex] = value;
+    newSections[sectionIndex].items[itemIndex] = cleanTextValue(value);
     onNestedChange('details', 'sections', newSections);
   };
 
-  const addItemToSection = (sectionIndex) => {
+  const addItemToSection = (sectionIndex: number) => {
     const newSections = [...formData.details.sections];
     newSections[sectionIndex].items.push('');
     onNestedChange('details', 'sections', newSections);
   };
 
-  const removeItemFromSection = (sectionIndex, itemIndex) => {
+  const removeItemFromSection = (sectionIndex: number, itemIndex: number) => {
     const newSections = [...formData.details.sections];
     newSections[sectionIndex].items.splice(itemIndex, 1);
     onNestedChange('details', 'sections', newSections);
   };
 
-  const removeSection = (sectionIndex) => {
-    const newSections = formData.details.sections.filter((_, i) => i !== sectionIndex);
+  const removeSection = (sectionIndex: number) => {
+    const newSections = formData.details.sections.filter((_: any, i: number) => i !== sectionIndex);
     onNestedChange('details', 'sections', newSections);
   };
 
   return (
     <div className="space-y-6">
+      <div className="mb-6">
+        <h2 className="text-xl font-semibold text-gray-900">التفاصيل التقنية</h2>
+        <p className="text-gray-600 text-sm mt-1">أضف التفاصيل والمواصفات التقنية للمنتج</p>
+      </div>
+
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-2">
-          وصف التفاصيل
+          وصف التفاصيل (اختياري)
         </label>
         <textarea
           value={formData.details.description}
-          onChange={(e) => onNestedChange('details', 'description', e.target.value)}
+          onChange={(e) => onNestedChange('details', 'description', cleanTextValue(e.target.value))}
+          onKeyPress={preventDangerousCharacters}
+          onPaste={handleTextPaste}
           rows={3}
           className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
             errors?.['details.description'] ? 'border-red-300' : 'border-gray-300'
@@ -72,31 +85,39 @@ const ProductDetails = ({ formData, onNestedChange, errors }) => {
           </button>
         </div>
 
-        {formData.details.sections.map((section, sectionIndex) => (
+        {formData.details.sections.map((section: any, sectionIndex: number) => (
           <div key={sectionIndex} className="bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
             <div className="mb-4">
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                عنوان القسم
+                عنوان القسم *
               </label>
               <input
                 type="text"
                 value={section.title}
                 onChange={(e) => updateSectionTitle(sectionIndex, e.target.value)}
+                onKeyPress={preventDangerousCharacters}
+                onPaste={handleTextPaste}
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="مثال: المواصفات التقنية"
+                maxLength={200}
               />
+              <p className="text-xs text-gray-500 mt-1">
+                {section.title?.length || 0}/200 حرف
+              </p>
             </div>
 
             <div className="space-y-2">
               <label className="block text-sm font-medium text-gray-700">
-                العناصر
+                العناصر *
               </label>
-              {section.items.map((item, itemIndex) => (
+              {section.items.map((item: string, itemIndex: number) => (
                 <div key={itemIndex} className="flex gap-2">
                   <input
                     type="text"
                     value={item}
                     onChange={(e) => updateSectionItem(sectionIndex, itemIndex, e.target.value)}
+                    onKeyPress={preventDangerousCharacters}
+                    onPaste={handleTextPaste}
                     className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="مثال: المعالج: Intel Core i7"
                   />
@@ -144,13 +165,14 @@ const ProductDetails = ({ formData, onNestedChange, errors }) => {
 
       <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
         <div className="flex items-start gap-3">
-          <Info className="h-5 w-5 text-amber-500 mt-0.5" />
+          <Info className="h-5 w-5 text-amber-500 mt-0.5 flex-shrink-0" />
           <div>
             <h4 className="text-sm font-medium text-amber-900 mb-1">نصائح لتنظيم التفاصيل</h4>
             <ul className="text-sm text-amber-700 space-y-1">
               <li>• قم بتجميع التفاصيل المتشابهة في أقسام منفصلة</li>
               <li>• استخدم عناوين واضحة لكل قسم (مثل: المواصفات، الأبعاد، المحتويات)</li>
               <li>• اكتب كل عنصر بصيغة "الخاصية: القيمة" للوضوح</li>
+              <li>• تجنب استخدام الرموز الخاصة مثل {'<'} {'>'} {'{'} {'}'}</li>
             </ul>
           </div>
         </div>
