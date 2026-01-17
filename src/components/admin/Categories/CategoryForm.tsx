@@ -80,21 +80,35 @@ const CategoryForm: React.FC = () => {
     const { name, value, type } = e.target;
     const checked = (e.target as HTMLInputElement).checked;
     
-    setFormData(prev => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value
-    }));
-
+    // تصفية حقل slug ليقبل فقط حروف إنجليزية وأرقام
+    if (name === 'slug') {
+      const cleanedSlug = value
+        .toLowerCase()
+        .replace(/[^a-z0-9-]/g, '') // فقط حروف إنجليزية صغيرة وأرقام وشرطة
+        .replace(/^-+|-+$/g, '') // إزالة الشرطات من البداية والنهاية
+        .replace(/-+/g, '-'); // تحويل الشرطات المتعددة إلى شرطة واحدة
+      
+      setFormData(prev => ({
+        ...prev,
+        slug: cleanedSlug
+      }));
+    } else {
+      setFormData(prev => ({
+        ...prev,
+        [name]: type === 'checkbox' ? checked : value
+      }));
+    }
+    
     // Auto-generate slug from name
     if (name === 'name' && !isEditing) {
       const slug = value
         .toLowerCase()
-        .replace(/[^a-zA-Z0-9\u0600-\u06FF\s]/g, '')
+        .replace(/[^a-z0-9\s]/g, '') // فقط حروف إنجليزية وأرقام ومسافات
         .replace(/\s+/g, '-')
         .trim();
       setFormData(prev => ({ ...prev, slug }));
     }
-
+    
     // Clear error
     if (errors[name as keyof Category]) {
       setErrors(prev => ({ ...prev, [name]: undefined }));
@@ -173,6 +187,8 @@ const CategoryForm: React.FC = () => {
 
     if (!formData.slug.trim()) {
       newErrors.slug = "الرابط المختصر مطلوب";
+    } else if (!/^[a-z0-9-]+$/.test(formData.slug)) {
+      newErrors.slug = "الرابط المختصر يجب أن يحتوي فقط على حروف إنجليزية صغيرة وأرقام وشرطة";
     }
 
     if (!formData.image.trim()) {
@@ -303,6 +319,12 @@ const CategoryForm: React.FC = () => {
           <p className="mt-1 text-sm text-red-600 flex items-center">
             <AlertCircle className="h-4 w-4 ml-1" />
             {errors[name]}
+          </p>
+        )}
+        
+        {name === 'slug' && !hasError && (
+          <p className="mt-1 text-xs text-gray-500">
+            حروف إنجليزية صغيرة، أرقام، وشرطة فقط (مثال: smart-phones)
           </p>
         )}
         
